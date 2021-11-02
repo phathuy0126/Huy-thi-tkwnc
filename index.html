@@ -130,7 +130,7 @@
     <main>
         <div class="container mt-4">
             <div class="row">
-                <div class="col-8">
+                <div class="col-8 carousel-banner">
                     <div id="mycarousel" class="carousel slide" data-ride="carousel">
 
                         <!--Cho hiện thị chỉ số nếu muốn-->
@@ -192,18 +192,18 @@
                 </div>
                 <div class="col-4 bannerSub">
                     <div class="row">
-                        <div class="col-6 mb-4">
+                        <div class="col-6 mb-4 bannerSub-item">
                             <img src="images/bannerSub1-340x340.jpg" alt="#">
                         </div>
-                        <div class="col-6 mb-4">
+                        <div class="col-6 mb-4 bannerSub-item">
                             <img src="images/bannerSub2.jpg" alt="#">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6 ">
+                        <div class="col-6 bannerSub-item">
                             <img src="images/bannerSub3.jpg" alt="#">
                         </div>
-                        <div class="col-6 ">
+                        <div class="col-6 bannerSub-item">
                             <img src="images/bannerSub4.jpg" alt="#">
                         </div>
                     </div>
@@ -246,6 +246,9 @@
                 </div> -->
             </div>
             <div class="slider-sale">
+                <div class="title-slider-sale">
+                    flash sale
+                </div>
                 <div class="slider-sale-sub row">
                     <div class="col-1 slider-item">
                         <img src="images/dt1.jpg" alt="">
@@ -310,26 +313,27 @@
             //     }, 3000);
             // })
             //---------------slider-sale
-            var w = 0;
+            var ml = 0;
+            var w = 232;
             $('.next').click(function () {
-                w-=232;
-                if(w>-(232*8)){
-                    $('.slider-sale-sub').css('margin-left', w)
+                ml-=w;
+                if(ml>-(w*8)){
+                    $('.slider-sale-sub').css('margin-left', ml)
                 }else{
-                    w=232;
+                    ml=w;
                 }
             })
             $('.prev').click(function () {
-                w+=232;
-                if(w<232){
-                    $('.slider-sale-sub').css('margin-left', w)
+                ml+=w;
+                if(ml<w){
+                    $('.slider-sale-sub').css('margin-left', ml)
                 }else{
-                    w=0;
+                    ml=0;
                 }         
             })
             setInterval(function() {
                 $('.next').click();
-            },3000)
+            },5000)
         })
     </script>
 </body>
