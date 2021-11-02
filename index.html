@@ -139,16 +139,16 @@
                                 <p>Mua Iphone X không lo rơi vỡ</p>
                             </li>
                             <li data-target="#mycarousel" data-slide-to="1" class="">
-                                <p>Mua Iphone X không lo rơi vỡ</p>
+                                <p>Phụ kiện iWalk mua 1 được 2</p>
                             </li>
                             <li data-target="#mycarousel" data-slide-to="2" class="">
-                                <p>Mua Iphone X không lo rơi vỡ</p>
+                                <p>Mua MI 8 | MI 8 SE Giá rẻ có trả góp</p>
                             </li>
                             <li data-target="#mycarousel" data-slide-to="3" class="">
-                                <p>Mua Iphone X không lo rơi vỡ</p>
+                                <p>Redmi note 7 giảm thẳng 500k</p>
                             </li>
                             <li data-target="#mycarousel" data-slide-to="4" class="">
-                                <p>Mua Iphone X không lo rơi vỡ</p>
+                                <p>Đặt trước MI 9 giá rẽ hơn 1 triệu</p>
                             </li>
                         </ol>
                         <!--Hết tạo chỉ số-->
@@ -221,7 +221,7 @@
                     <a href="#"><i class="far fa-comment-dots"></i></a>
                 </div>
                 <div class="row mt-5 cart">
-                    <div class="nav-bar-cart">                
+                    <div class="nav-bar-cart">
                         <div class="row mx-2 mt-3">
                             <div class="sum-item col-6">
                                 <p>Tổng cộng:</p>
@@ -239,13 +239,54 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#"><i class="fas fa-shopping-cart"></i></a>                
+                    <a href="#"><i class="fas fa-shopping-cart"></i></a>
                 </div>
                 <!-- <div class="row">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div> -->
             </div>
-            
+            <div class="slider-sale">
+                <div class="slider-sale-sub row">
+                    <div class="col-1 slider-item">
+                        <img src="images/dt1.jpg" alt="">
+                    </div>
+                    <div class="col-1 slider-item">
+                        <img src="images/dt9.jpg" alt="">
+                    </div>
+                    <div class="col-1 slider-item">
+                        <img src="images/dt7.jpg" alt="">
+                    </div>
+                    <div class="col-1 slider-item">
+                        <img src="images/dt8.jpg" alt="">
+                    </div>
+                    <div class="col-1 slider-item">
+                        <img src="images/dt-5.jpg" alt="">
+                    </div>
+                    <div class="col-1 slider-item">
+                        <img src="images/dt-2.jpg" alt="">
+                    </div>
+                    <div class="col-1 slider-item">
+                        <img src="images/dt1.jpg" alt="">
+                    </div>
+                    <div class="col-1 slider-item">
+                        <img src="images/dt8.jpg" alt="">
+                    </div>
+                    <div class="col-1 slider-item">
+                        <img src="images/dt9.jpg" alt="">
+                    </div>
+                    <div class="col-1 slider-item">
+                        <img src="images/dt1.jpg" alt="">
+                    </div>
+                    <div class="col-1 slider-item">
+                        <img src="images/dt-5.jpg" alt="">
+                    </div>
+                    <div class="col-1 slider-item">
+                        <img src="images/dt1.jpg" alt="">
+                    </div>
+                    <span class="next">next</span>
+                    <span class="prev">prev</span>
+                </div>
+            </div>
         </div>
     </main>
     <!-- Optional JavaScript -->
@@ -260,13 +301,37 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!-- ---------------------------------Jquery code ------------------------------------------------------>
-    <!-- <script>
-        $(document).ready(function () {
-            setInterval(function () {
-                $('.carousel-control-next').click();
-            }, 3000);
+    <script>
+        $(function () {
+            //---------------auto click next
+            // $(document).ready(function () {
+            //     setInterval(function () {
+            //         $('.carousel-control-next').click();
+            //     }, 3000);
+            // })
+            //---------------slider-sale
+            var w = 0;
+            $('.next').click(function () {
+                w-=232;
+                if(w>-(232*8)){
+                    $('.slider-sale-sub').css('margin-left', w)
+                }else{
+                    w=232;
+                }
+            })
+            $('.prev').click(function () {
+                w+=232;
+                if(w<232){
+                    $('.slider-sale-sub').css('margin-left', w)
+                }else{
+                    w=0;
+                }         
+            })
+            setInterval(function() {
+                $('.next').click();
+            },3000)
         })
-    </script> -->
+    </script>
 </body>
 
 </html>
