@@ -247,47 +247,96 @@
             </div>
             <div class="slider-sale">
                 <div class="title-slider-sale">
-                    flash sale
+                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/fb1088de81e42c4e538967ec12cb5caa.png"
+                        alt="">
                 </div>
                 <div class="slider-sale-sub row">
                     <div class="col-1 slider-item">
                         <img src="images/dt1.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
                     <div class="col-1 slider-item">
                         <img src="images/dt9.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
                     <div class="col-1 slider-item">
                         <img src="images/dt7.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
                     <div class="col-1 slider-item">
                         <img src="images/dt8.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
                     <div class="col-1 slider-item">
                         <img src="images/dt-5.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
                     <div class="col-1 slider-item">
                         <img src="images/dt-2.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
                     <div class="col-1 slider-item">
                         <img src="images/dt1.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
                     <div class="col-1 slider-item">
                         <img src="images/dt8.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
                     <div class="col-1 slider-item">
                         <img src="images/dt9.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
                     <div class="col-1 slider-item">
                         <img src="images/dt1.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
                     <div class="col-1 slider-item">
                         <img src="images/dt-5.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
                     <div class="col-1 slider-item">
                         <img src="images/dt1.jpg" alt="">
+                        <div class="slider-item-if">
+                            <p>Samsung Galaxy S10e</p>
+                            <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                        </div>
                     </div>
-                    <span class="next">next</span>
-                    <span class="prev">prev</span>
+                    <span class="next"><i class="fas fa-angle-right"></i></span>
+                    <span class="prev"><i class="fas fa-angle-left"></i></span>
                 </div>
             </div>
         </div>
@@ -314,26 +363,26 @@
             // })
             //---------------slider-sale
             var ml = 0;
-            var w = 232;
+            var w = 234;
             $('.next').click(function () {
-                ml-=w;
-                if(ml>-(w*8)){
+                ml -= w;
+                if (ml > -(w * 8)) {
                     $('.slider-sale-sub').css('margin-left', ml)
-                }else{
-                    ml=w;
+                } else {
+                    ml = w;
                 }
             })
             $('.prev').click(function () {
-                ml+=w;
-                if(ml<w){
+                ml += w;
+                if (ml < w) {
                     $('.slider-sale-sub').css('margin-left', ml)
-                }else{
-                    ml=0;
-                }         
+                } else {
+                    ml = 0;
+                }
             })
-            setInterval(function() {
+            setInterval(function () {
                 $('.next').click();
-            },5000)
+            }, 5000)
         })
     </script>
 </body>

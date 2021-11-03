@@ -8,6 +8,7 @@ body {
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
   background-color: rgb(240, 238, 238);
+  user-select: none;
 }
 header {
   box-shadow: rgb(0, 0, 0, 0.5) 0px 0px 30px 0px;
@@ -295,25 +296,25 @@ div.cart a i {
   display: block;
 }
 /*---------------------------- slider - sale */
-.title-slider-sale{
-    background-color: #ff3300;
-    width: fit-content;
-    font-size: x-large;
-    font-weight: bold;
-    padding: 3px 30px;    
-    
-    position: absolute;
-    left: 50%;
-    top: 0px;
-    transform: translateX(-50%);
-
+.title-slider-sale {
+  color: #ff3300;
+  width: fit-content;
+  font-size: x-large;
+  font-weight: bold;
+  padding: 3px 30px;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%);
 }
 div.slider-sale {
-  margin: 50px 0px;
+  margin: 35px 0px;
   padding-top: 40px;
+  height: 370px;
   overflow: hidden;
-  border: 2px #ff3300 solid;
+  border: 1px #ff3300 solid;
   position: relative;
+  background-color: #fff;
 }
 .slider-sale-sub {
   padding: 20px;
@@ -322,45 +323,84 @@ div.slider-sale {
 }
 div.slider-item {
   width: 230px;
+  height: 200px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+div.slider-item img:hover{
+  transform: scale(1.05);
+}
+div.slider-item:hover .slider-item-if>p:first-child {
+  color: #ff3300;
+}
+.slider-sale-sub:hover .next {
+  right: 5px;
+}
+.slider-sale-sub:hover .prev {
+  left: 5px;
 }
 div.slider-sale .slider-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: .3s ease;
 }
 .next,
 .prev {
   width: 40px;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
-  line-height: 35px;
   border-radius: 5px;
   cursor: pointer;
-  user-select: none;
+  text-align: center;
+  line-height: 50px;
+  transition: .3s ease;
+}
+.next i,
+.prev i{
+  font-size: xx-large;
+  color: #ff3300;
 }
 .next {
-  right: 5px;
+  right: -40px;
 }
 .prev {
-  left: 5px;
+  left: -40px;
+}
+.slider-item-if{
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+  padding-top: 10px;
+}
+.slider-item-if p:nth-child(2) span:first-child {
+  color: #ff3300;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+.slider-item-if p:nth-child(2) span:nth-child(2){
+  text-decoration: line-through;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 /* -----------------------reponsive */
 @media (max-width: 1100px) {
-    .header-col2 ul{
-        display: none;
-    }
-    .bannerSub{
-        display: none;
-    }
-    .carousel-banner{
-        max-width: 100%;
-        flex: 1;
-    }
-    .slider-sale{
-        margin: 100px 0px !important;
-    }
+  .header-col2 ul {
+    display: none;
+  }
+  .bannerSub {
+    display: none;
+  }
+  .carousel-banner {
+    max-width: 100%;
+    flex: 1;
+  }
+  .slider-sale {
+    margin: 100px 0px !important;
+  }
 }
