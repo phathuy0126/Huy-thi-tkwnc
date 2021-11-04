@@ -426,8 +426,13 @@ div.slider-sale .slider-item>img {
 }
 /* -----------------------reponsive */
 @media (max-width: 1100px) {
-  .header-col2 ul {
-    display: none;
+  .header-col1 {
+    max-width: 90%;
+    flex: 0.8;
+  }
+  .header-col2 {
+    visibility: hidden;
+    max-width: 10%;
   }
   .bannerSub {
     display: none;
