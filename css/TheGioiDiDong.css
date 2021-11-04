@@ -220,7 +220,7 @@ div.fixed-bar div a i {
 /* ------------------cart */
 div.cart {
   position: relative;
-  width: 60px;  
+  width: 60px;
   height: 60px;
   border-radius: 50%;
   background-color: #ffa58f;
@@ -322,9 +322,9 @@ div.cart a i {
   transform: translateX(-50%);
 }
 div.slider-sale {
-  margin: 35px 0px;
+  margin-top: 2rem;
   padding-top: 40px;
-  height: 370px;
+  height: 390px;
   overflow: hidden;
   border: 1px #ff3300 solid;
   position: relative;
@@ -335,20 +335,20 @@ div.slider-sale {
   width: max-content;
   transition: all 0.5s ease;
 }
-div.slider-item {
+div.item-product {
   width: 230px;
-  height: 200px;
-  margin-top: 10px;
+  height: 320px;
   cursor: pointer;
+  overflow: hidden;
 }
-div.slider-item img:hover {
+div.item-product:hover img {
   transform: scale(1.05);
 }
-div.slider-item:hover .slider-item-if > p:first-child {
+div.item-product:hover .item-product-if > p:first-child {
   color: #ff3300;
 }
 /* ------------sale percent */
-.slider-item-sale-percent {
+.item-product-sale-percent {
   background-image: linear-gradient(-90deg, #ec1f1f 0%, #ff9c00 100%);
   border-radius: 10px;
   padding: 1px 7px;
@@ -360,10 +360,10 @@ div.slider-item:hover .slider-item-if > p:first-child {
   position: absolute;
   left: 2.5rem;
   z-index: 1;
-  bottom: 20px;
+  top: 175px;
   font-size: 11px;
 }
-.slider-item-sale-percent img {
+.item-product-sale-percent img {
   width: 18px;
   height: 18px;
   margin-bottom: 2px;
@@ -375,9 +375,10 @@ div.slider-item:hover .slider-item-if > p:first-child {
 .slider-sale-sub:hover .prev {
   left: 5px;
 }
-div.slider-sale .slider-item>img {
+.item-product>img {
   width: 100%;
-  height: 100%;
+  height: 70%;
+  margin-top: 5px;
   object-fit: cover;
   transition: 0.3s ease;
 }
@@ -406,23 +407,77 @@ div.slider-sale .slider-item>img {
 .prev {
   left: -40px;
 }
-.slider-item-if {
+.item-product-if {
   text-align: center;
   font-weight: bold;
   font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.7);
   padding-top: 10px;
 }
-.slider-item-if p:nth-child(2) span:first-child {
+.item-product-if p:nth-child(2) span:first-child {
   color: #ff3300;
   font-weight: bold;
   margin-right: 10px;
   font-size: 1rem;
 }
-.slider-item-if p:nth-child(2) span:nth-child(2) {
+.item-product-if p:nth-child(2) span:nth-child(2) {
   text-decoration: line-through;
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.5);
+}
+/* -----------------section 3 điện thoại*/
+.section-3__content{
+  padding: 23px;
+  background-color: #fff;
+  margin-top: 2rem;
+}
+.title-name {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: large;
+}
+.item-product__overplay {
+  width: 100%;
+  height: 75%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: -100px;
+  top: 0px;
+  z-index: 999;
+  font-size: 0.8rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .4s ease;
+  padding-right: 10px;
+}
+.item-product__overplay span {
+  font-weight: bold;
+}
+.section-3__content .item-product .item-product-if:hover ~ .item-product__overplay {
+  visibility: visible;
+  opacity: 1;
+  left: 0px;
+}
+/* --------------------Footer */
+.footer {
+  font-size: 0.9rem;
+}
+.footer .list-menu {
+  list-style: none;
+  margin-left: -40px;
+}
+.footer .list-menu li a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+}
+.bottom-footer .list-menu li {
+  display: inline;
+}
+.footer{
+  background-color: #fff;
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
 /* -----------------------reponsive */
 @media (max-width: 1100px) {
