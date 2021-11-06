@@ -335,9 +335,16 @@ div.slider-sale {
   width: max-content;
   transition: all 0.5s ease;
 }
+.section-5 .item-product {
+  height: 250px;
+}
+.section-5 .item-product .item-product-sale-percent {
+  top: 150px;
+}
 div.item-product {
   width: 230px;
-  height: 320px;
+  height: 280px;
+  text-align: center;
   cursor: pointer;
   overflow: hidden;
 }
@@ -378,8 +385,8 @@ div.item-product:hover .item-product-if > p:first-child {
 .item-product>img {
   width: 100%;
   height: 70%;
+  padding: 10px;
   margin-top: 5px;
-  object-fit: cover;
   transition: 0.3s ease;
 }
 .next,
@@ -442,6 +449,7 @@ div.item-product:hover .item-product-if > p:first-child {
   height: 75%;
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
+  text-align: left;
   left: -100px;
   top: 0px;
   z-index: 999;
