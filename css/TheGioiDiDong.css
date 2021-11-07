@@ -10,6 +10,9 @@ body {
   background-color: rgb(240, 238, 238);
   user-select: none;
 }
+:root {
+  --mycolor : #ff3300;
+}
 header {
   box-shadow: rgb(0, 0, 0, 0.5) 0px 0px 30px 0px;
   background-color: #fff;
@@ -23,7 +26,7 @@ header {
   }
 }
 .header-col1 {
-  background-color: #ff3300;
+  background-color: var(--mycolor);
 }
 .search {
   z-index: 2;
@@ -42,7 +45,7 @@ header {
 .search i {
   position: absolute;
   right: 25px;
-  color: #ff3300;
+  color: var(--mycolor);
   width: 20px;
   height: 20px;
   font-size: 20px;
@@ -82,10 +85,10 @@ header {
   color: #000;
 }
 .header-col2 > ul > li > a:hover {
-  color: #ff3300;
+  color: var(--mycolor);
 }
 li.user a {
-  color: #ff3300 !important;
+  color: var(--mycolor) !important;
 }
 li.user a p {
   font-weight: bold;
@@ -114,7 +117,7 @@ ul.nav-sub > li > a {
   transition: all 0.2s linear;
 }
 ul.nav-sub > li > a:hover {
-  color: #ff3300;
+  color: var(--mycolor);
   padding-left: 50px;
 }
 .mobile:hover .nav-sub,
@@ -167,7 +170,7 @@ ol.carousel-indicators {
 ol.carousel-indicators li {
   width: 20%;
   height: 70px;
-  color: #ff3300;
+  color: var(--mycolor);
   text-indent: unset;
   opacity: 1 !important;
   background-color: transparent !important;
@@ -186,10 +189,10 @@ ol.carousel-indicators li p {
   font-size: 0.9rem;
 }
 li.active {
-  border-bottom: 3px solid #ff3300 !important;
+  border-bottom: 3px solid var(--mycolor) !important;
 }
 li.active p {
-  color: #ff3300 !important;
+  color: var(--mycolor) !important;
 }
 /* -----------------------------fixed bar */
 div.fixed-bar {
@@ -217,6 +220,22 @@ div.fixed-bar div {
 div.fixed-bar div a i {
   font-size: 40px;
 }
+.fixed-bar .icon-arrow-up {
+  font-size: 2.5rem;
+  color: var(--mycolor);
+  position: fixed;
+  bottom: 10px;
+  right: -20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: .4s ease;
+  visibility: hidden;
+}
+.fixed-bar .icon-arrow-up.is-show {
+  right: 5px;
+  opacity: 1;
+  visibility: visible;
+}
 /* ------------------cart */
 div.cart {
   position: relative;
@@ -240,7 +259,7 @@ div.cart a {
   content: "";
   width: 20px;
   height: 20px;
-  border: #ff3300 2px solid;
+  border: var(--mycolor) 2px solid;
   border-radius: 50%;
   opacity: 0;
   animation: cart-sub linear 1s infinite;
@@ -271,7 +290,7 @@ div.cart a i {
 }
 .nav-bar-cart .buy-item p,
 .nav-bar-cart .cart-item p {
-  background-color: #ff3300;
+  background-color: var(--mycolor);
   text-align: center;
   border-radius: 5px;
   padding: 5px 0px;
@@ -311,7 +330,7 @@ div.cart a i {
 }
 /*---------------------------- slider - sale */
 .title-slider-sale {
-  color: #ff3300;
+  color: var(--mycolor);
   width: fit-content;
   font-size: x-large;
   font-weight: bold;
@@ -326,7 +345,7 @@ div.slider-sale {
   padding-top: 40px;
   height: 390px;
   overflow: hidden;
-  border: 1px #ff3300 solid;
+  border: 1px var(--mycolor) solid;
   position: relative;
   background-color: #fff;
 }
@@ -352,7 +371,7 @@ div.item-product:hover img {
   transform: scale(1.05);
 }
 div.item-product:hover .item-product-if > p:first-child {
-  color: #ff3300;
+  color: var(--mycolor);
 }
 /* ------------sale percent */
 .item-product-sale-percent {
@@ -406,7 +425,7 @@ div.item-product:hover .item-product-if > p:first-child {
 .next i,
 .prev i {
   font-size: xx-large;
-  color: #ff3300;
+  color: var(--mycolor);
 }
 .next {
   right: -40px;
@@ -422,7 +441,7 @@ div.item-product:hover .item-product-if > p:first-child {
   padding-top: 10px;
 }
 .item-product-if p:nth-child(2) span:first-child {
-  color: #ff3300;
+  color: var(--mycolor);
   font-weight: bold;
   margin-right: 10px;
   font-size: 1rem;
@@ -488,23 +507,16 @@ div.item-product:hover .item-product-if > p:first-child {
   padding-top: 1rem;
 }
 /* -----------------------reponsive */
-@media (max-width: 1100px) {
-  .header-col1 {
-    max-width: 90%;
-    flex: 0.8;
-  }
+@media (max-width: 1100px) {  
   .header-col2 {
     visibility: hidden;
     max-width: 10%;
-  }
-  .bannerSub {
     display: none;
   }
-  .carousel-banner {
-    max-width: 100%;
-    flex: 1;
-  }
-  .slider-sale {
-    margin: 100px 0px !important;
+}
+@media (max-width: 990px) {
+  .bannerSub {
+    margin-top: 7rem;
   }
 }
+
