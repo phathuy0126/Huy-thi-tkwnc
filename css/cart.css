@@ -5,6 +5,9 @@ body {
     text-decoration: none;
     color: #000;
 }
+.section-cart .row-1 a:hover {
+    color: var(--mycolor);    
+}
 .section-cart .container {
     min-height: 400px;
 }
@@ -15,6 +18,7 @@ body {
     font-weight: bold;
     font-size: 0.8rem;
     text-align: center;
+    box-shadow: 0 5px 7px 0 rgba(50,50,50,0.33);
 }
 .row-4 button,
 .btn-buy {

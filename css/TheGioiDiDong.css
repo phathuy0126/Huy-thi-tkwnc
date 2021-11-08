@@ -12,9 +12,15 @@ body {
 }
 :root {
   --mycolor : #ff3300;
+  --color_star:#fb6e2e;
+  --giacu:rgba(0, 0, 0, 0.5);
+  --mygreen:#34a105;
+}
+.active {
+  color: var(--mycolor);  
 }
 header {
-  box-shadow: rgb(0, 0, 0, 0.5) 0px 0px 30px 0px;
+  box-shadow: 0 5px 7px 0 rgba(50,50,50,0.33);
   background-color: #fff;
 }
 #logo {

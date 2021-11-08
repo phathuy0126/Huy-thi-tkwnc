@@ -1,0 +1,120 @@
+body {
+    background-color: #fff !important;
+}
+.section-details-sp .row-1 {
+    margin-top: 20px;
+}
+.section-details-sp .row-1 a {
+    text-decoration: none;
+    color: #000;
+}
+.section-details-sp .row-1 a:hover {
+    color: var(--mycolor);    
+}
+.row-2 .title-sp p {
+    float: left;
+    font-size: 0.6rem;
+    color: var(--color_star);
+    line-height: 0px;
+    padding: 0px 1px;    
+}
+.row-2 .title-sp p:first-child {
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.row-2 .title-sp p:last-child {
+    font-size: 0.8rem;
+    color: var(--primary);
+    line-height: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.row-3 .img-sp {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+}
+.row-3 .img-sp img {
+    width: 80%;
+    height: 80%;    
+}
+.row-3 .carousel-sp {
+    width: 100%;
+    height: 50px;
+}
+.row-3 .thongtin div {
+    margin-bottom: 10px;
+}
+.row-3 .thongtin div:first-child p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--mycolor);
+}
+.row-3 .thongtin div:nth-child(2) p {
+    display: inline;
+    padding: 2px;
+}
+.row-3 .thongtin div:nth-child(2) p:nth-child(2) {
+    text-decoration: line-through;
+    font-weight: bold;    
+    color: var(--giacu);
+    margin-right: 20px;
+}
+.row-3 .thongtin div:nth-child(2) p:nth-child(3),
+.row-3 .thongtin div:nth-child(2) p:nth-child(4) {
+    color: var(--mygreen);
+}
+.row-3 .thongtin div:nth-child(3) p{
+    display: inline;
+    padding: 2px;
+}
+.row-3 .thongtin div:nth-child(3) p:nth-child(2) {
+    color: var(--mygreen);
+}
+.row-3 .thongtin div:nth-child(4) {
+    border: 1px #ccc solid;
+}
+.row-3 .thongtin div:nth-child(4) p:first-child {
+    background-color: var(--mygreen);
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px; 
+}
+.row-3 .thongtin div:nth-child(4) p:nth-child(2) {
+    padding: 20px 20px 10px 20px;
+}
+.row-3 .thongtin div:nth-child(5) {
+    text-align: center;
+}
+.row-3 .thongtin div:nth-child(5) button {
+    background-color: var(--mycolor);
+    width: 40%;
+    padding: 5px 0px;
+    border-radius: 5px;
+    outline: none;    
+    color: #fff;
+}
+.row-3 .thongtin div:nth-child(5) button i{
+    margin-right: 10px;
+}
+.row-3 .thongtin table{
+    margin-top: 50px;
+    width: fit-content;   
+    margin-left: 30px; 
+}
+.row-3 .thongtin table tr:first-child{
+    text-align: center;
+}
+.row-3 .thongtin table tr:last-child{
+    text-align: center;    
+}
+.row-3 .thongtin table tr:last-child button {
+    
+}
+.row-3 .thongtin table tr td:first-child {
+    min-width: 200px;
+    padding: 5px 0px;
+}
+
