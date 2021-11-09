@@ -15,86 +15,80 @@ body {
   --color_star:#fb6e2e;
   --giacu:rgba(0, 0, 0, 0.5);
   --mygreen:#34a105;
+  --mybg : linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
 .active {
   color: var(--mycolor);  
-}
-header {
-  box-shadow: 0 5px 7px 0 rgba(50,50,50,0.33);
-  background-color: #fff;
-}
-#logo {
-  width: 120px;
 }
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px;
   }
 }
-.header-col1 {
-  background-color: var(--mycolor);
-}
 .search {
-  z-index: 2;
-}
-.search::before {
-  position: absolute;
-  right: -22px;
-  bottom: 10px;
-  z-index: -111;
-  background-color: #fff;
-  content: "";
-  width: 45px;
-  height: 45px;
-  transform: rotate(45deg);
+  z-index: 2;  
+  position: relative;
+  width: 250px;
+  margin-right: 10rem;
 }
 .search i {
   position: absolute;
-  right: 25px;
+  right: 5px;
   color: var(--mycolor);
   width: 20px;
   height: 20px;
   font-size: 20px;
   cursor: pointer;
 }
-.search input {
-  padding: 6px 80px 6px 5px;
-  border-radius: 7px;
-  border: 1px solid rgb(197, 196, 196);
+.search input {  
+  border-radius: 6px;
+  border: none;
   outline: none;
   box-shadow: rgb(0, 0, 0, 0.5) 0px 0px 5px 0px;
 }
-.header-col2 {
-  height: 65px;
-  z-index: 100;
+.header {  
+  box-shadow: 0 5px 7px 0 rgba(50,50,50,0.33);
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  z-index: 999;
 }
-.header-col2 img,
-.header-col2 i {
+.header .navbar {
+  padding: 0px !important;
+}
+.header nav div>a {
+  margin: 0px 5%;
+}
+#logo {
+  width: 120px;
+}
+.header img,
+.header i {
   width: 20px;
-  height: 20px;
   font-size: 21px;
+  margin-right: 1rem;
+  margin-bottom: 5px;  
 }
-.header-col2 > ul {
-  width: fit-content;
-  height: 70px;
-}
-.header-col2 > ul > li {
-  list-style: none;
-  float: left;
+.header-navbar-ul > li {  
+  line-height: 15px;
+  padding: 0px 20px;
+  padding-top: 10px;
   text-align: center;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 4px;
 }
-.header-col2 > ul > li > a {
+.header-navbar-ul{
+  z-index: 999;
+}
+.header-navbar-ul > li > a {
   text-decoration: none;
   color: #000;
 }
-.header-col2 > ul > li > a:hover {
-  color: var(--mycolor);
+.header-navbar-ul > li:hover>a{
+  color: #fff;
 }
 li.user a {
-  color: var(--mycolor) !important;
+  color: var(--mycolor) !important;  
+}
+li.user a i {
+  margin-right: 0px;
 }
 li.user a p {
   font-weight: bold;
@@ -103,7 +97,7 @@ li.user a p {
 ul.nav-sub {
   background-color: #fff;
   width: 250px;
-  margin-top: -8px;
+  margin-top: 0px;
   opacity: 1;
   padding: 0px !important;
   display: none;
@@ -407,7 +401,11 @@ div.item-product:hover .item-product-if > p:first-child {
 .slider-sale-sub:hover .prev {
   left: 5px;
 }
-.item-product>img {
+.item-product a {
+  text-decoration: none;
+  color: #000;    
+}
+.item-product a>img {
   width: 100%;
   height: 70%;
   padding: 10px;
@@ -469,29 +467,6 @@ div.item-product:hover .item-product-if > p:first-child {
   color: rgba(0, 0, 0, 0.7);
   font-size: large;
 }
-.item-product__overplay {
-  width: 100%;
-  height: 75%;
-  background-color: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  text-align: left;
-  left: -100px;
-  top: 0px;
-  z-index: 999;
-  font-size: 0.8rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: all .4s ease;
-  padding-right: 10px;
-}
-.item-product__overplay span {
-  font-weight: bold;
-}
-.section-3__content .item-product .item-product-if:hover ~ .item-product__overplay {
-  visibility: visible;
-  opacity: 1;
-  left: 0px;
-}
 /* --------------------Footer */
 .footer {
   font-size: 0.9rem;
@@ -514,15 +489,20 @@ div.item-product:hover .item-product-if > p:first-child {
 }
 /* -----------------------reponsive */
 @media (max-width: 1100px) {  
-  .header-col2 {
-    visibility: hidden;
-    max-width: 10%;
-    display: none;
-  }
 }
 @media (max-width: 990px) {
   .bannerSub {
     margin-top: 7rem;
+  }
+  .carousel-indicators li p{
+    font-size: 0.5rem !important;        
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 20px;
+    height: 20px;
+    border-radius:1px;
+    padding: 3px;
   }
 }
 

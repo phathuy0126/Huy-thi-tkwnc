@@ -15,115 +15,112 @@
 </head>
 
 <body>
-    <header>
-        <nav class="nav-bar row container-fluid header">
-            <div class="col-5 header-col1 d-flex justify-content-end align-items-center">
-                <div class="mx-5">
-                    <a href="../index.html"><img src="../images/logo.png" alt="#" id="logo"></a>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../images/logo.png" alt="#" id="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="d-flex search align-items-center py-1">
+                        <input class="form-control me-2" type="search" aria-label="Search" placeholder="Tìm kiếm...">
+                        <i class="fas fa-search"></i>
+                    </form>
+                    <ul class="navbar-nav header-navbar-ul">
+                        <li class="nav-item mobile">
+                            <a href="#">
+                                <img src="../images/mobile.svg" alt="#" />
+                                <p class="dropdown-toggle">Điện thoại</p>
+                            </a>
+                            <ul class="nav-sub position-absolute">
+                                <li>
+                                    <a href="#">Iphone</a>
+                                </li>
+                                <li>
+                                    <a href="#">Samsung</a>
+                                </li>
+                                <li>
+                                    <a href="#">Oppo</a>
+                                </li>
+                                <li>
+                                    <a href="#">Xiaomi</a>
+                                </li>
+                                <li>
+                                    <a href="#">Realme</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item tablet">
+                            <a href="#">
+                                <img src="../images/tablet.svg" alt="#" />
+                                <p class="dropdown-toggle">Tablet</p>
+                            </a>
+                            <ul class="nav-sub position-absolute">
+                                <li>
+                                    <a href="#">Apple Ipad</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tablet</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item Laptop">
+                            <a href="#">
+                                <img src="../images/laptop.svg" alt="#" />
+                                <p class="dropdown-toggle">Laptop</p>
+                            </a>
+                            <ul class="nav-sub position-absolute">
+                                <li>
+                                    <a href="#">Apple Macbook & iMac</a>
+                                </li>
+                                <li>
+                                    <a href="#">Laptop Dell</a>
+                                </li>
+                                <li>
+                                    <a href="#">Laptop Asus</a>
+                                </li>
+                                <li>
+                                    <a href="#">Laptop Acer</a>
+                                </li>
+                                <li>
+                                    <a href="#">Laptop Hp</a>
+                                </li>
+                                <li>
+                                    <a href="#">Laptop Hp</a>
+                                </li>
+                                <li>
+                                    <a href="#">Laptop Lenovo</a>
+                                </li>
+                                <li>
+                                    <a href="#">Laptop Gaming</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item watch">
+                            <a href="#">
+                                <img src="../images/watch.svg" alt="#" />
+                                <p class="dropdown-toggle">Đồng hồ</p>
+                            </a>
+                            <ul class="nav-sub position-absolute">
+                                <li>
+                                    <a href="#">Đồng hồ thông minh</a>
+                                </li>
+                                <li>
+                                    <a href="#">Đồng hồ thời trang</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item user">
+                            <a href="#">
+                                <i class="far fa-user-circle"></i>
+                                <p>Đăng nhập</p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="search d-flex align-items-center">
-                    <input type="text" placeholder="Tìm kiếm...">
-                    <i class="fas fa-search"></i>
-                </div>
-            </div>
-            <div class="col-7 header-col2">
-                <ul>
-                    <li class="mobile">
-                        <a href="#">
-                            <img src="../images/mobile.svg" alt="#" />
-                            <p class="dropdown-toggle">Điện thoại</p>
-                        </a>
-                        <ul class="nav-sub position-absolute">
-                            <li>
-                                <a href="#">Iphone</a>
-                            </li>
-                            <li>
-                                <a href="#">Samsung</a>
-                            </li>
-                            <li>
-                                <a href="#">Oppo</a>
-                            </li>
-                            <li>
-                                <a href="#">Xiaomi</a>
-                            </li>
-                            <li>
-                                <a href="#">Realme</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="tablet">
-                        <a href="#">
-                            <img src="../images/tablet.svg" alt="#" />
-                            <p class="dropdown-toggle">Tablet</p>
-                        </a>
-                        <ul class="nav-sub position-absolute">
-                            <li>
-                                <a href="#">Apple Ipad</a>
-                            </li>
-                            <li>
-                                <a href="#">Tablet</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="Laptop">
-                        <a href="#">
-                            <img src="../images/laptop.svg" alt="#" />
-                            <p class="dropdown-toggle">Laptop</p>
-                        </a>
-                        <ul class="nav-sub position-absolute">
-                            <li>
-                                <a href="#">Apple Macbook & iMac</a>
-                            </li>
-                            <li>
-                                <a href="#">Laptop Dell</a>
-                            </li>
-                            <li>
-                                <a href="#">Laptop Asus</a>
-                            </li>
-                            <li>
-                                <a href="#">Laptop Acer</a>
-                            </li>
-                            <li>
-                                <a href="#">Laptop Hp</a>
-                            </li>
-                            <li>
-                                <a href="#">Laptop Hp</a>
-                            </li>
-                            <li>
-                                <a href="#">Laptop Lenovo</a>
-                            </li>
-                            <li>
-                                <a href="#">Laptop Gaming</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="phuKien">
-                        <a href="#">
-                            <img src="../images/tainghe.svg" alt="#" />
-                            <p class="dropdown-toggle">Phụ kiện</p>
-                        </a>
-                    </li>
-                    <li class="watch">
-                        <a href="#">
-                            <img src="../images/watch.svg" alt="#" />
-                            <p class="dropdown-toggle">Đồng hồ</p>
-                        </a>
-                        <ul class="nav-sub position-absolute">
-                            <li>
-                                <a href="#">Đồng hồ thông minh</a>
-                            </li>
-                            <li>
-                                <a href="#">Đồng hồ thời trang</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="user">
-                        <a href="#">
-                            <i class="far fa-user-circle"></i>
-                            <p>Đăng nhập</p>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </nav>
     </header>
@@ -133,7 +130,7 @@
             <div class="row row-1">
                 <div class="col-12">
                     <a href="../index.html">Trang chủ </a><span>></span><span class="active"> Sản phẩm</span>
-                    <hr>                
+                    <hr>
                 </div>
             </div>
             <div class="row row-2">
@@ -146,17 +143,17 @@
                         <p><i class="fas fa-star"></i></p>
                         <p><i class="fas fa-star"></i></p>
                         <p>0 đánh giá</p>
-                    </div>                     
+                    </div>
                 </div>
             </div>
-            <hr> 
+            <hr>
             <div class="row row-3">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     <div class="img-sp">
                         <img src="../images/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg" alt="">
                     </div>
                     <div class="carousel-sp bg-danger">
-                        
+
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 thongtin">
@@ -181,7 +178,9 @@
                         <button><i class="fas fa-cart-plus"></i>Mua ngay</button>
                     </div>
                     <table>
-                        <tr><th colspan="2">Thông số kĩ thuật</th></tr>
+                        <tr>
+                            <th colspan="2">Thông số kĩ thuật</th>
+                        </tr>
                         <tr>
                             <td>Màn hình: </td>
                             <td>OLED6.7"Super Retina XDR</td>
@@ -193,15 +192,15 @@
                         <tr>
                             <td>Camera sau:</td>
                             <td>3 camera 12 MP</td>
-                        </tr>       
+                        </tr>
                         <tr>
                             <td>Camera trước:</td>
                             <td>12 MP</td>
-                        </tr>       
+                        </tr>
                         <tr>
                             <td>Chip: </td>
                             <td>Apple A15 Bionic</td>
-                        </tr>          
+                        </tr>
                         <tr>
                             <td>Ram</td>
                             <td>6 GB</td>
@@ -218,136 +217,163 @@
                             <td>Pin, sạc:</td>
                             <td>4352 mAh20, 20 W</td>
                         </tr>
-                        <tr><td colspan="2"><button type="button" class="btn btn-outline-primary">Xem thông tin chi tiết...</button></td></tr>
-                    </table>                    
-                </div>                
+                        <tr>
+                            <td colspan="2"><button type="button" class="btn btn-outline-primary">Xem thông tin chi
+                                    tiết...</button></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div class="row row-4">
                 <div class="col-12">
                     <div class="slider-sale">
                         <div class="title-slider-sale">
-                            <p>Sản phẩm liên quan</p>                            
+                            <p>Sản phẩm liên quan</p>
                         </div>
                         <div class="slider-sale-sub row">
                             <div class="col-1 item-product">
-                                <img src="../images/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Iphone 12 Pro</p>
-                                    <p><span>32,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Iphone 12 Pro</p>
+                                        <p><span>32,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-1 item-product">
-                                <img src="../images/samsung-galaxy-s21-ultra-bac-600x600-1-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Samsung Galaxy S21 Ultra</p>
-                                    <p><span>6,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/samsung-galaxy-s21-ultra-bac-600x600-1-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Samsung Galaxy S21 Ultra</p>
+                                        <p><span>6,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-1 item-product">
-                                <img src="../images/realme-7-pro-bac-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Realme 7 Pro</p>
-                                    <p><span>2,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/realme-7-pro-bac-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Realme 7 Pro</p>
+                                        <p><span>2,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-1 item-product">
-                                <img src="../images/samsung-galaxy-m51-den-new-600x600-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Samsung Galaxy M51</p>
-                                    <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/samsung-galaxy-m51-den-new-600x600-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Samsung Galaxy M51</p>
+                                        <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-1 item-product">
-                                <img src="../images/realme-8-silver-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Realme 8</p>
-                                    <p><span>2,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/realme-8-silver-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Realme 8</p>
+                                        <p><span>2,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-1 item-product">
-                                <img src="../images/samsung-galaxy-s21-ultra-bac-600x600-1-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Samsung Galaxy S21 Ultra</p>
-                                    <p><span>6,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/samsung-galaxy-s21-ultra-bac-600x600-1-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Samsung Galaxy S21 Ultra</p>
+                                        <p><span>6,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-1 item-product">
-                                <img src="../images/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Iphone 12</p>
-                                    <p><span>32,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Iphone 12</p>
+                                        <p><span>32,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-1 item-product">
-                                <img src="../images/samsung-galaxy-m51-den-new-600x600-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Samsung Galaxy M51</p>
-                                    <p><span>12,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/samsung-galaxy-m51-den-new-600x600-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Samsung Galaxy M51</p>
+                                        <p><span>12,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-1 item-product">
-                                <img src="../images/samsung-galaxy-s21-ultra-bac-600x600-1-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Samsung Galaxy S21 Ultra</p>
-                                    <p><span>8,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/samsung-galaxy-s21-ultra-bac-600x600-1-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Samsung Galaxy S21 Ultra</p>
+                                        <p><span>8,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-1 item-product">
-                                <img src="../images/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Iphone 12 Pro</p>
-                                    <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Iphone 12 Pro</p>
+                                        <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-1 item-product">
-                                <img src="../images/realme-8-silver-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Realme 8</p>
-                                    <p><span>4,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/realme-8-silver-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Realme 8</p>
+                                        <p><span>4,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="col-1 item-product">
-                                <img src="../images/samsung-galaxy-z-flip-3-green-1-600x600.jpg" alt="">
-                                <div class="item-product-sale-percent">
-                                    <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
-                                </div>
-                                <div class="item-product-if">
-                                    <p>Samsung Galaxy Z Flip3 </p>
-                                    <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
-                                </div>
+                                <a href="webpages/thongtinsanpham.html">
+                                    <img src="../images/samsung-galaxy-z-flip-3-green-1-600x600.jpg" alt="">
+                                    <div class="item-product-sale-percent">
+                                        <img src="../images/flash.png" alt=""><span>Giảm</span><span> 2%</span>
+                                    </div>
+                                    <div class="item-product-if">
+                                        <p>Samsung Galaxy Z Flip3 </p>
+                                        <p><span>22,990,000đ</span><span>23,590,000đ</span></p>
+                                    </div>
+                                </a>
                             </div>
                             <span class="next"><i class="fas fa-angle-right"></i></span>
                             <span class="prev"><i class="fas fa-angle-left"></i></span>
@@ -571,7 +597,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <script src="../js/javascrip.js"></script>
+    <script src="../js/javascrip.js"></script>
 </body>
 
 </html>

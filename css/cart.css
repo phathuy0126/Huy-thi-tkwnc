@@ -11,14 +11,18 @@ body {
 .section-cart .container {
     min-height: 400px;
 }
-.menu-cart {    
-    background-color: var(--mycolor);
+.menu-cart {            
     text-transform: uppercase;    
     color: #fff;
     font-weight: bold;
     font-size: 0.8rem;
     text-align: center;
     box-shadow: 0 5px 7px 0 rgba(50,50,50,0.33);
+}
+.menu-cart>div {
+    background-color: var(--mycolor);
+    padding: 5px 0px;    
+    margin-top: 10px;
 }
 .row-4 button,
 .btn-buy {
