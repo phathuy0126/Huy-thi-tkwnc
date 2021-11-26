@@ -8,6 +8,12 @@ body {
 .section-cart .row-1 a:hover {
     color: var(--mycolor);    
 }
+.section-cart .row-1 {
+    font-weight: bold;
+    font-size: 0.8rem;   
+    text-transform: uppercase;
+    letter-spacing: 0px; 
+}
 .section-cart .container {
     min-height: 400px;
 }

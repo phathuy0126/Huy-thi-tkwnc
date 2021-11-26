@@ -6,8 +6,8 @@ $(function () {
             //     }, 3000);
             // })
             //---------------slider-sale
-            var ml = 0;
-            var w = 234;
+            var ml = 0;            
+            var w = parseInt($('.item-product').width()) + 32;            
             $('.next').click(function () {
                 ml -= w;
                 if (ml > -(w * 8)) {
