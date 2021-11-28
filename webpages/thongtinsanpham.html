@@ -112,7 +112,7 @@
                         </ul>
                     </li>
                     <li class="nav-item user">
-                        <span>Đăng nhập </span>|<span> Đăng kí</span>
+                        <span class="login">Đăng nhập </span>|<span class="register"> Đăng kí</span>
                     </li>
                 </ul>
             </div>
@@ -142,15 +142,72 @@
             </div>
             <hr>
             <div class="row row-3">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="img-sp">
-                        <img src="../images/iphone-12-pro-max-xanh-duong-new-600x600-600x600.jpg" alt="">
+                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 carousel_sp">
+                    <div id="carouselId" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <img src="../images/carousel_1_iphone-13mini-1020x570.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/carousel_2-iphone-13-slider-tong-quan-1020x570-1.jpg"
+                                    alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/carousel_3-vi-vn-iphone-13-slider-chip.jpg" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/carousel_4_vi-vn-iphone-13-slider-hieu-suat.jpg" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/carousel_5_vi-vn-iphone-13-slider-128gb.jpg" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/carousel_6_vi-vn-iphone-13-slider-5g.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>                    
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 my-2">
+                            <div>
+                                - Hư gì đỗi nấy 12 tháng tại các cữa hàng trên toàn quốc ( miễn phí tháng đầu )
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 my-2">
+                            <div>- Bảo hành chính hãng điện thoại 1 năm </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 my-2">
+                            <div>
+                                - Bộ sản phẩm bao gồm: Hộp, sách hướng dẫn, cây lấy sim, cáp sạc
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-sp bg-danger">
-
+                    <div class="row img_large">
+                        <div class="col-12">
+                            <img src="../images/hinh_lon_thong_tin_sp_iphone-13-n.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row baiviet">
+                        <div class="col-12">
+                            <h4>Bài viết</h4>
+                            <p>Trong khi sức hút đến từ bộ 4 phiên bản iPhone 12 vẫn chưa nguội đi, thì Apple đã
+                                mang đến cho người dùng một siêu phẩm mới iPhone 13 - điện thoại có nhiều cải tiến thú
+                                vị sẽ mang lại những trải nghiệm hấp dẫn nhất cho người dùng.</p>
+                            <h4 class="mt-2">Hiệu năng vượt trội nhờ chip Apple A15 Bionic</h4>
+                            <p>Con chip Apple A15 Bionic siêu mạnh được sản xuất trên quy trình 5 nm giúp iPhone 13 đạt
+                                hiệu năng ấn tượng, với CPU nhanh hơn 50%, GPU nhanh hơn 30% so với các đối thủ trong
+                                cùng phân khúc.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 thongtin">
+                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 thongtin">
                     <div>
                         <p>32,990,000đ</p>
                     </div>
@@ -169,7 +226,8 @@
                         <p>Giảm ngay 200,000đ chỉ duy nhất ngày hôm nay</p>
                     </div>
                     <div>
-                        <button><i class="fas fa-cart-plus"></i>Mua ngay</button>
+                        <button data-toggle="modal" data-target="#modelId" class="btn_buy"><i
+                                class="fas fa-cart-plus"></i>Mua ngay</button>
                     </div>
                     <table>
                         <tr>
@@ -580,6 +638,56 @@
             </div>
         </div>
     </footer>
+    <!-- modal buy now  -->
+    <!-- Modal -->
+    <div class="modal_buynow">
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <p class="modal-title">Iphone 13 128GB</p>
+                        <p class="text-danger">24.990.000đ</p>
+                    </div>
+                    <div class="modal-body">
+                        <p>Chọn màu: </p>
+                        <div class="items">
+                            <div class="item_radio">
+                                <input type="radio" name="radio">
+                                <p>Đen</p>
+                            </div>
+                            <div class="item_radio">
+                                <input type="radio" name="radio">
+                                <p>Xanh dương</p>
+                            </div>
+                            <div class="item_radio">
+                                <input type="radio" name="radio">
+                                <p>Trắng</p>
+                            </div>
+                            <div class="item_radio">
+                                <input type="radio" name="radio">
+                                <p>Đỏ</p>
+                            </div>
+                        </div>
+                        <div class="soluong">
+                            <p class="mr-4">Chọn số lượng: </p>
+                            <div class="number">
+                                <div class="dl">-</div>
+                                <div class="number_buy">1</div>
+                                <div class="add">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button">Đặt mua</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -592,6 +700,28 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="../js/javascrip.js"></script>
+    <script>
+        $(function () {
+            var number_buy = 1;
+            $('.modal_buynow .add').click(function () {
+                number_buy += 1;
+                $('.number_buy').text(number_buy)
+            })
+            $('.modal_buynow .dl').click(function () {                
+                if(number_buy > 1) {
+                    number_buy -= 1;
+                    $('.number_buy').text(number_buy)
+                }else {
+                    return false;
+                }
+                console.log(number_buy)
+            })       
+            //modal login
+            $('.login').click(function() {
+                $.ajax()
+            })
+        })
+    </script>
 </body>
 
 </html>

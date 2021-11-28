@@ -35,18 +35,22 @@ body {
     margin-left: 10px;
     cursor: pointer;
 }
-.row-3 .img-sp {
+/* carousel-sp */
+.carousel_sp .carousel-item img {
     width: 100%;
-    height: 600px;
-    text-align: center;
+    height: 100%;
+    object-fit: cover;
 }
-.row-3 .img-sp img {
-    width: 80%;
-    height: 80%;    
+.show_carousel_large {
+    cursor: pointer;    
 }
-.row-3 .carousel-sp {
+.show_carousel_large:hover {
+    color: var(--mycolor);
+}
+.img_large img {
     width: 100%;
-    height: 50px;
+    height: 100%;
+    object-fit: cover;
 }
 .row-3 .thongtin div {
     margin-bottom: 10px;
@@ -120,5 +124,74 @@ body {
 .row-3 .thongtin table tr td:first-child {
     min-width: 200px;
     padding: 5px 0px;
+}
+/* btn buy  */
+.modal_buynow {
+    font-size: 0.9rem !important;
+}
+.modal_buynow .modal-header {
+    flex-direction: column;
+    padding-bottom: 0px !important;
+}
+.modal_buynow .modal-body .items {
+    display: flex;
+    justify-content: space-around;
+}
+.modal_buynow .modal-body .items .item_radio {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;    
+}
+.modal_buynow input {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.modal_buynow .modal-body .items p {    
+    width: min-content;
+}
+.modal_buynow .soluong {
+    display: flex;    
+}
+.modal_buynow .soluong p {
+    font-weight: 500;
+}
+.modal_buynow .soluong .number {
+    display: flex;
+}
+.modal_buynow .soluong .number div {
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.modal_buynow .modal-footer button {
+    width: 100%;
+    background: var(--mycolor);
+    border-radius: 3px;
+    outline: none;
+}
+/* modal sản phẩm carousel */
+.modal_sp_overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal_sp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 

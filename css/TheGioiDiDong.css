@@ -190,15 +190,15 @@ ul.nav-sub > li > a:hover {
   cursor: pointer;
 }
 /* ---------------------------------------------carousel slider */
-ol.carousel-indicators {
+.carousel_tgdd ol.carousel-indicators {
   bottom: -80px !important;
   background-color: #fff;
   margin-right: 0px !important;
   margin-left: 0px !important;
   margin-bottom: 0px !important;
 }
-.carousel-control-next,
-.carousel-control-prev {
+.carousel_tgdd .carousel-control-next,
+.carousel_tgdd .carousel-control-prev {
   background-color: rgba(0, 0, 0, 0.5);
   width: 50px;
   height: 50px;
@@ -208,13 +208,13 @@ ol.carousel-indicators {
   line-height: 55px;
   cursor: pointer;
 }
-.carousel-control-next {
+.carousel_tgdd .carousel-control-next {
   right: 5px;
 }
-.carousel-control-prev {
+.carousel_tgdd .carousel-control-prev {
   left: 5px;
 }
-ol.carousel-indicators li {
+.carousel_tgdd ol.carousel-indicators li {
   width: 20%;
   height: 70px;
   color: var(--mycolor);
@@ -227,7 +227,7 @@ ol.carousel-indicators li {
   margin-right: 0px;
   overflow: hidden;
 }
-ol.carousel-indicators li p {
+.carousel_tgdd ol.carousel-indicators li p {
   margin: 0px;
   width: fit-content;
   height: 50px;
@@ -235,10 +235,10 @@ ol.carousel-indicators li p {
   color: #000;
   font-size: 0.9rem;
 }
-li.active {
+.carousel_tgdd li.active {
   border-bottom: 3px solid var(--mycolor) !important;
 }
-li.active p {
+.carousel_tgdd li.active p {
   color: var(--mycolor) !important;
 }
 /* -----------------------------fixed bar */
