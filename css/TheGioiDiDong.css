@@ -12,6 +12,7 @@ body {
     "Segoe UI Symbol";
   background-color: rgb(240, 238, 238);
   user-select: none;
+  min-width: 1366px;
 }
 :root {
   --mycolor: #ff3300;
@@ -586,7 +587,7 @@ div.item-product:hover .item-product-if > p:first-child {
   display: none;   
 }
 /* -----------------------reponsive */
-@media (max-width: 1100px) {
+/* @media (max-width: 1100px) {
 }
 @media (max-width: 990px) {
   .bannerSub {
@@ -614,5 +615,5 @@ div.item-product:hover .item-product-if > p:first-child {
   .navbar-ul li ul {
     display: none !important;
   }  
-}
+} */
 

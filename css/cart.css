@@ -56,3 +56,53 @@ body {
 .row-5 div{
     text-align: right;
 }
+.section_form_buy .form {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    border: 1px solid gray;
+    padding: 20px;    
+}
+.section_form_buy .form h6, 
+.section_form_buy .form div,
+.section_form_buy .form textarea,
+.section_form_buy .form input,
+.section_form_buy .form select {
+    margin: 10px;
+    border-radius: 5px;
+}
+.section_form_buy input[type=radio],
+.section_form_buy input[type=checkbox] {
+    cursor: pointer;
+}
+.section_form_buy .form h6 {
+    text-transform: uppercase;
+}
+.section_form_buy .diachi input {
+    width: 100%;
+}
+.section_form_buy .diachi select {
+    background: transparent;    
+    padding: 5px 10px;    
+}
+.maGiamGia button {
+    background: transparent;
+    border: 1px solid gray;
+}
+.maGiamGia div input,
+.maGiamGia div button {    
+    display: inline-block;
+}
+.maGiamGia div input {
+ width: 80%;
+}
+.maGiamGia div button {
+    height: 38px;
+    border-radius: 5px;        
+}
+.maGiamGia div {
+    display: none;
+}
+.NguoiKhac .NguoiKhac_content {
+    display: none;
+}

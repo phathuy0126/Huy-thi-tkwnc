@@ -173,7 +173,7 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
-                    </div>                    
+                    </div>
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 my-2">
                             <div>
@@ -656,7 +656,7 @@
                         <p>Chọn màu: </p>
                         <div class="items">
                             <div class="item_radio">
-                                <input type="radio" name="radio">
+                                <input type="radio" name="radio" checked>
                                 <p>Đen</p>
                             </div>
                             <div class="item_radio">
@@ -682,12 +682,12 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button">Đặt mua</button>
+                        <a href="cart.html" class="btn_DatHang"><button type="button">Đặt hàng</button></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -707,19 +707,15 @@
                 number_buy += 1;
                 $('.number_buy').text(number_buy)
             })
-            $('.modal_buynow .dl').click(function () {                
-                if(number_buy > 1) {
+            $('.modal_buynow .dl').click(function () {
+                if (number_buy > 1) {
                     number_buy -= 1;
                     $('.number_buy').text(number_buy)
-                }else {
+                } else {
                     return false;
                 }
                 console.log(number_buy)
-            })       
-            //modal login
-            $('.login').click(function() {
-                $.ajax()
-            })
+            })                        
         })
     </script>
 </body>

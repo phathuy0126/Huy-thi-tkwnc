@@ -154,12 +154,12 @@
 
             </div>
             <div class="row my-4 row-4">
-                <div class="col-6">
+                <div class="col-xl-6 col-lg-6 col-md-12">
                     <div>
                         <button class="btn-remove-cart mr-2">Xóa giỏ hàng</button><button>Tiếp tục mua hàng</button>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-xl-6 col-lg-6 col-md-12 mt-4">
                     <table>
                         <tr>
                             <td>Giá</td>
@@ -181,6 +181,78 @@
                     <button class="btn-buy">Thanh toán</button>
                 </div>
             </div>
+        </div>
+    </section>
+    <hr>
+    <section class="section_form_buy">
+        <div class="container">
+            <form action="" class="form">
+                <h6>thông tin khách hàng</h6>
+                <div class="gioitinh">
+                    <input type="radio" name="gt">
+                    <span>Anh</span>
+                    <input type="radio" name="gt" class="ml-4">
+                    <span>Chị</span>
+                </div>
+                <h6>Chọn cách thức nhận hàng</h6>
+                <div class="giaohang">
+                    <input type="radio" name="gh">
+                    <span>Giao tận nơi</span>
+                    <input type="radio" name="gh" class="ml-4">
+                    <span>Nhận tại siêu thị</span>
+                </div>
+                <div class="diachi">
+                    <h6>Chọn địa chỉ</h6>
+                    <select name="" id="">
+                        <option value="Chọn Tp/Tỉnh">Chọn Tp/Tỉnh</option>
+                        <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                        <option value="Tiền Giang">Tiền Giang</option>
+                        <option value="Sóc Trăng">Sóc Trăng</option>
+                        <option value="Bình Thuận">Bình Thuận</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="Chọn Quận/Huyện">Chọn Quận/Huyện</option>
+                        <option value="Cai lậy">Cai lậy</option>
+                        <option value="Gò công">Gò công</option>
+                        <option value="Thị xã cai lậy">Thị xã cai lậy</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="Chọn Quận/Huyện">Chọn Phường/Xã</option>
+                        <option value="Cai lậy">Hội xuân</option>
+                        <option value="Gò công">Cẩm sơn</option>
+                        <option value="Tam bình">Tam bình</option>
+                    </select>
+                    <textarea class="form-control" name="" id="" rows="2" placeholder="Số nhà, tên đường"></textarea>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                            placeholder="Yêu cầu khác (không bắt buộc)">
+                    </div>
+                </div>
+                <div class="NguoiKhac">
+                    <div class="NguoiKhac_slidedown">
+                        <input type="checkbox">
+                        <span>Gọi người khác nhận hàng (nếu có)</span>
+                    </div>
+                    <div class="NguoiKhac_content">
+                        <input type="radio" name="gt">
+                        <span>Anh</span>
+                        <input type="radio" name="gt" class="ml-4">
+                        <span>Chị</span>
+                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                            placeholder="Họ tên người nhận">
+                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                            placeholder="Số điện thoại người nhận ">
+                    </div>
+                </div>
+                <div class="maGiamGia">
+                    <button type="button" class="btn dropdown-toggle">Dùng mã giảm giá</button>
+                    <div>
+                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                            placeholder="Nhập mã giảm giá">
+                        <button>Áp dụng</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
     <hr>
@@ -388,15 +460,27 @@
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- code jquery -->
+    <script>
+        $(function () {
+            $('.NguoiKhac .NguoiKhac_slidedown').click(function () {
+                $(this).next().slideToggle();          
+                $(this).children('input').attr('checked','checked')
+            })
+            $('.maGiamGia button').click(function () {
+                $(this).next().slideToggle();
+            })
+        })
+    </script>
 </body>
 
 </html>
