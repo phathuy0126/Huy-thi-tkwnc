@@ -12,7 +12,6 @@ body {
     "Segoe UI Symbol";
   background-color: rgb(240, 238, 238);
   user-select: none;
-  min-width: 1366px;
 }
 :root {
   --mycolor: #ff3300;
@@ -39,7 +38,7 @@ body {
   z-index: 2;
   position: relative;
   width: 250px;
-  margin-right: 100px;  
+  margin-right: 100px;
 }
 .search i {
   position: absolute;
@@ -66,7 +65,7 @@ body {
   background-color: #ff3300;
 }
 .nav_bar_new {
-  z-index: 999;  
+  z-index: 999;
   width: 100%;
   background-color: #fff;
   position: fixed;
@@ -77,6 +76,7 @@ body {
   width: fit-content;
   list-style: none;
   margin: auto;
+  padding-left: 0px;
 }
 .nav_bar_new ul li {
   display: inline-block;
@@ -86,7 +86,7 @@ body {
 .nav_bar_new ul li a {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.8rem;  
+  font-size: 0.8rem;
   text-decoration: none;
   color: #000;
 }
@@ -111,7 +111,7 @@ body {
 }
 .my-navbar button {
   outline: none;
-  color: #fff;  
+  color: #fff;
 }
 .navbar-ul > li {
   line-height: 15px;
@@ -129,7 +129,7 @@ body {
 .navbar-ul > li:hover > a,
 .user span:hover {
   color: #fff;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 li.user {
   font-weight: bold;
@@ -137,10 +137,10 @@ li.user {
   position: absolute;
   right: 5px;
   top: 50%;
-  transform: translateY(-60%);  
+  transform: translateY(-60%);
 }
 li.user span {
-  cursor: pointer;  
+  cursor: pointer;
 }
 /* nav Sub điện thoại */
 ul.nav-sub {
@@ -184,7 +184,7 @@ ul.nav-sub > li > a:hover {
   }
 }
 .bannerSub-item {
-  height: 187px;
+  height: fit-content;
 }
 .bannerSub img {
   width: 100%;
@@ -392,9 +392,9 @@ div.cart a i {
   transform: translateX(-50%);
 }
 div.slider-sale {
-  margin-top: 2rem;
+  margin-top: 5%;
   padding-top: 40px;
-  height: 390px;
+  max-height: 390px;
   overflow: hidden;
   border: 1px var(--mycolor) solid;
   position: relative;
@@ -406,14 +406,15 @@ div.slider-sale {
   transition: all 0.5s ease;
 }
 .section-5 .item-product {
-  height: 250px;
+  max-height: 250px;
 }
 .section-5 .item-product .item-product-sale-percent {
-  top: 150px;
+  bottom: 45%;
 }
 div.item-product {
-  width: 230px;
-  height: 280px;
+  width: 100%;
+  max-width: 230px;
+  max-height: 280px;
   text-align: center;
   cursor: pointer;
   overflow: hidden;
@@ -435,9 +436,9 @@ div.item-product:hover .item-product-if > p:first-child {
   color: #fff;
   font-weight: 600;
   position: absolute;
-  left: 2.5rem;
+  left: 5%;
   z-index: 1;
-  top: 175px;
+  bottom: 35%;
   font-size: 11px;
 }
 .item-product-sale-percent img {
@@ -460,7 +461,7 @@ div.item-product:hover .item-product-if > p:first-child {
 }
 .item-product a > img {
   width: 100%;
-  height: 70%;
+  max-height: 70%;
   padding: 10px;
   margin-top: 5px;
   transition: 0.3s ease;
@@ -513,8 +514,8 @@ div.item-product:hover .item-product-if > p:first-child {
 .section-3__content,
 .section-4__content,
 .section-5__content {
-  padding: 25px;  
-  background-color: #fff;  
+  padding: 25px;
+  background-color: #fff;
 }
 .section-6__content {
   padding: 15px;
@@ -546,26 +547,26 @@ div.item-product:hover .item-product-if > p:first-child {
   padding-top: 1rem;
 }
 /* slider đồng hồ */
-.content-watch {    
-  background-color: var(--bg-slider-watch);    
+.content-watch {
+  background-color: var(--bg-slider-watch);
 }
 .content-slider-watch {
   position: relative;
 }
-.slider-watch {    
+.slider-watch {
   width: 895px;
-  height: 368px;    
+  height: 368px;
   background-color: #fff;
   margin-left: 55px;
   border-radius: 5px;
-  padding-top: 40px; 
+  padding-top: 40px;
   display: flex;
   justify-content: center;
-  position: absolute;    
+  position: absolute;
 }
 .menu-watch {
   margin-left: 55px;
-  padding: 10px 0px;  
+  padding: 10px 0px;
 }
 .menu-watch button {
   margin-right: 8px;
@@ -584,24 +585,31 @@ div.item-product:hover .item-product-if > p:first-child {
 .slider-watch-2,
 .slider-watch-3,
 .slider-watch-4 {
-  display: none;   
+  display: none;
 }
 /* -----------------------reponsive */
-/* @media (max-width: 1100px) {
+@media (max-width: 1100px) {
 }
 @media (max-width: 990px) {
-  .bannerSub {
-    margin-top: 7rem;
+  * {
+    font-size: 0.9rem;
+  }
+  #header button,
+  #header .navbar-collapse {
+    display: none;
   }
   .carousel-indicators li p {
-    font-size: 0.5rem !important;
+    font-size: 0.8rem !important;
   }
   .carousel-control-next,
   .carousel-control-prev {
-    width: 20px;
-    height: 20px;
-    border-radius: 1px;
-    padding: 3px;
+    background: transparent !important;
+  }
+  .bannerSub {
+    margin-top: 80px;
+  }
+  .bannerSub .bannerSub-item {
+    height: fit-content;
   }
   .search {
     margin-left: auto;
@@ -614,6 +622,18 @@ div.item-product:hover .item-product-if > p:first-child {
   }
   .navbar-ul li ul {
     display: none !important;
+  }
+  .section-6 {
+    display: none;
+  }
+  .nav_bar_new ul li:last-child {
+    display: none;
+  }
+  .fixed-bar i {
+    font-size: 25px !important;
   }  
-} */
-
+  .cart {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
