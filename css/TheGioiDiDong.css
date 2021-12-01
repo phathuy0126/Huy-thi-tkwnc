@@ -34,11 +34,13 @@ body {
     max-width: 1200px;
   }
 }
+.main {
+  margin-top: 90px;
+}
 .search {
   z-index: 2;
   position: relative;
-  width: 250px;
-  margin-right: 100px;
+  width: 350px;  
 }
 .search i {
   position: absolute;
@@ -58,8 +60,9 @@ body {
 .my-navbar {
   box-shadow: 0 5px 7px 0 rgba(50, 50, 50, 0.33);
   padding: 0px !important;
-  position: relative;
-  top: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;  
   width: 100%;
   z-index: 999;
   background-color: #ff3300;
@@ -121,6 +124,8 @@ body {
 }
 .navbar-ul {
   z-index: 999;
+  width: 100%;
+  padding-left: 110px;
 }
 .navbar-ul > li > a {
   text-decoration: none;
@@ -133,11 +138,11 @@ body {
 }
 li.user {
   font-weight: bold;
-  font-size: 0.9rem;
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-60%);
+  font-size: 0.9rem;    
+  display: flex;  
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
 }
 li.user span {
   cursor: pointer;
@@ -296,7 +301,7 @@ div.cart {
   background-color: #ffa58f;
   align-items: center;
 }
-div.cart a {
+div.cart .i_cart{
   color: #fff;
   display: flex;
   justify-content: center;
@@ -306,6 +311,9 @@ div.cart a {
   height: 50px;
   z-index: 2;
 }
+div.cart a:hover {
+  color: #fff !important;
+}
 .cart::before {
   content: "";
   width: 20px;
@@ -313,8 +321,7 @@ div.cart a {
   border: var(--mycolor) 2px solid;
   border-radius: 50%;
   opacity: 0;
-  animation: cart-sub linear 1s infinite;
-  /* will-change: width height opacity; */
+  animation: cart-sub linear 1s infinite;  
 }
 @keyframes cart-sub {
   100% {
@@ -323,15 +330,24 @@ div.cart a {
     opacity: 1;
   }
 }
-div.cart a i {
+div.cart .i_cart i {
   font-size: 20px !important;
   position: absolute;
+}
+/* item_sản phẩm */
+.item-sp div:nth-child(2) p {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(228, 228, 228);  
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;  
+  line-height: 30px;
 }
 /* -------------------------------------------nav-bar-cart */
 .nav-bar-cart {
   position: absolute;
   width: 300px;
-  max-height: 112px;
   background-color: #fff;
   right: 5px;
   bottom: 85px;
@@ -339,13 +355,22 @@ div.cart a i {
   border: 2px solid rgb(223, 221, 221);
   display: none;
 }
-.nav-bar-cart .buy-item p,
-.nav-bar-cart .cart-item p {
+.nav-bar-cart div {
+  justify-content: center;
+}
+.nav-bar-cart .buy-item ,
+.nav-bar-cart .cart-item {
+  display: flex;
+  justify-content: center;
+}
+.nav-bar-cart .buy-item a,
+.nav-bar-cart .cart-item a {
   background-color: var(--mycolor);
   text-align: center;
   border-radius: 5px;
-  padding: 5px 0px;
+  padding: 5px 10px;
   color: #fff;
+  text-decoration: none;
   cursor: pointer;
 }
 .nav-bar-cart .price-item {
@@ -358,7 +383,7 @@ div.cart a i {
 .cart-item::before {
   position: absolute;
   right: -3px;
-  bottom: -10px;
+  bottom: -15px;
   z-index: -111;
   background-color: #fff;
   border: 2px solid rgb(223, 221, 221);
@@ -370,10 +395,10 @@ div.cart a i {
 .cart-item::after {
   position: absolute;
   right: -3px;
-  top: 50px;
+  top: 45px;
   z-index: -111;
   content: "";
-  width: 60px;
+  width: 60px;  
   height: 60px;
 }
 .cart:hover .nav-bar-cart {
@@ -588,16 +613,15 @@ div.item-product:hover .item-product-if > p:first-child {
   display: none;
 }
 /* -----------------------reponsive */
-@media (max-width: 1100px) {
-}
+@media (max-width: 1025px) {  
+  .navbar-ul li.user {
+    display: block;
+  }
+} 
 @media (max-width: 990px) {
   * {
     font-size: 0.9rem;
-  }
-  #header button,
-  #header .navbar-collapse {
-    display: none;
-  }
+  }    
   .carousel-indicators li p {
     font-size: 0.8rem !important;
   }
@@ -605,14 +629,29 @@ div.item-product:hover .item-product-if > p:first-child {
   .carousel-control-prev {
     background: transparent !important;
   }
+  .main {
+    margin-top: 70px;
+  }
   .bannerSub {
     margin-top: 80px;
   }
   .bannerSub .bannerSub-item {
     height: fit-content;
   }
+  .item-product-sale-percent {
+    bottom: 45%;
+  }
+  .slider-sale .item-product-sale-percent {
+    bottom: 35%;
+  }
+  .navbar-collapse {
+    padding-bottom: 20px;
+  }
   .search {
-    margin-left: auto;
+    margin: auto;    
+  }
+  .navbar-ul {
+    padding-left: 0px;
   }
   .navbar-ul li a img {
     display: none;
@@ -636,4 +675,5 @@ div.item-product:hover .item-product-if > p:first-child {
     width: 50px !important;
     height: 50px !important;
   }
+  
 }
