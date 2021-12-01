@@ -1,6 +1,9 @@
 body {
     background-color: #fff !important;
 }
+.section-details-sp {
+    margin-top: 80px;
+}
 .section-details-sp .row-1 {
     margin-top: 20px;
     font-weight: bold;

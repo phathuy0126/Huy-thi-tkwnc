@@ -1,6 +1,9 @@
 body {
     background-color: #fff !important;
 }
+.section-cart {
+    margin-top: 80px;
+}
 .section-cart .row-1 a {
     text-decoration: none;
     color: #000;
