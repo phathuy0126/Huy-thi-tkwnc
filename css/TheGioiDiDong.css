@@ -108,7 +108,7 @@ body {
 .my-navbar img,
 .my-navbar i {
   width: 20px;
-  font-size: 21px;
+  font-size: 1rem;
   margin-right: 1rem;
   margin-bottom: 5px;
 }
@@ -125,11 +125,15 @@ body {
 .navbar-ul {
   z-index: 999;
   width: 100%;
-  padding-left: 110px;
+  padding-left: 110px;  
+  position: relative;  
 }
 .navbar-ul > li > a {
   text-decoration: none;
   color: #000;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .8rem;
 }
 .navbar-ul > li:hover > a,
 .user span:hover {
@@ -660,8 +664,11 @@ div.item-product:hover .item-product-if > p:first-child {
     display: block;
     padding-left: 0px;
   }
-  .navbar-ul li a img {
+  .navbar-ul .nav-item:nth-child(4) {
     display: none;
+  }  
+  .navbar-ul .nav-item a{
+    display: flex;    
   }
   .navbar-ul li {
     text-align: left !important;

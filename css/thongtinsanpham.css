@@ -145,13 +145,16 @@ body {
     flex-direction: column;    
     align-items: center;    
 }
-.modal_buynow input {
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-}
 .modal_buynow .modal-body .items p {    
     width: min-content;
+}
+.modal_buynow .items .item_radio input {
+    width: 14px;
+    height: 14px;    
+}
+.modal_buynow .items .item_radio input,
+.modal_buynow .items .item_radio label {
+    cursor: pointer;
 }
 .modal_buynow .soluong {
     display: flex;    

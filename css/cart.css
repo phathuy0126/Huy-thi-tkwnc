@@ -1,6 +1,9 @@
 body {
     background-color: #fff !important;
 }
+label {
+    cursor: pointer;
+}
 .section-cart {
     margin-top: 80px;
 }
@@ -33,13 +36,16 @@ body {
     padding: 5px 0px;    
     margin-top: 10px;
 }
-.row-4 button,
+.row-4 a,
+.row-4 a,
 .btn-buy {
     background-color: var(--mycolor);
     border-radius: 5px;
-    color: #fff;
+    color: #fff !important;
     padding: 7px 20px;
     outline: none;    
+    text-decoration: none;
+    border: 1px solid gray;        
 }
 .row-4 table {
     width: 100%;
