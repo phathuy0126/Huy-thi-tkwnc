@@ -1,6 +1,9 @@
 body {
     background-color: #fff !important;
 }
+a {
+    cursor: pointer;
+}
 label {
     cursor: pointer;
 }
@@ -23,7 +26,7 @@ label {
 .section-cart .container {
     min-height: 400px;
 }
-.menu-cart {            
+.listProduct {            
     text-transform: uppercase;    
     color: #fff;
     font-weight: bold;
@@ -31,10 +34,34 @@ label {
     text-align: center;
     box-shadow: 0 5px 7px 0 rgba(50,50,50,0.33);
 }
-.menu-cart>div {
-    background-color: var(--mycolor);
-    padding: 5px 0px;    
-    margin-top: 10px;
+.listProduct>.product>div>div:nth-child(2) {
+    margin-top: 1rem;
+    color: #000;    
+    text-transform: none;
+}
+.listProduct>.product>div>div:first-child {
+    background-color: var(--mycolor);    
+}
+.listProduct>.product {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.listProduct>.product>div {
+    padding: 0;
+}
+.listProduct>.product>div>.img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+.listProduct>.product>div>.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.listProduct>.product>div>.delete {
+    cursor: pointer;
 }
 .row-4 a,
 .row-4 a,

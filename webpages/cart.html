@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>cart</title>
     <!-- Required meta tags -->
@@ -130,36 +131,16 @@
             <div class="row mx-3 mb-2">
                 <h5>Thông tin giỏ hàng</h5>
             </div>
-            <div class="row p-2 menu-cart">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
-                    <div>Ảnh</div>                    
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
-                    <div>Tên Sản Phẩm</div>
-                </div>
-                <div class="col-xl-1 col-lg-1 col-md-6 col-sm-6 col-6">
-                    <div>Đơn giá</div>
-                </div>
-                <div class="col-xl-1 col-lg-1 col-md-6 col-sm-6 col-6">
-                    <div>Số lượng</div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6">
-                    <div>Thành tiền</div>
-                </div>
-                <div class="col-xl-1 col-lg-1 col-md-6 col-sm-6 col-6">
-                    <div>Xóa</div>
-                </div>
-            </div>
-            <div class="row">
+            <div class="row p-2 listProduct">
 
             </div>
             <div class="row my-4 row-4">
-                <div class="col-xl-6 col-lg-6 col-md-12">
+                <div class="col-lg-6 col-12">
                     <div>
                         <a class="btn-remove-cart mr-2">Xóa giỏ hàng</a><a href="../index.html">Tiếp tục mua hàng</a>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-12 mt-4">
+                <div class="col-lg-6 col-12 mt-4">
                     <table>
                         <tr>
                             <td>Giá</td>
@@ -338,7 +319,7 @@
                 </div>
             </div>
             <div class="row bottom-footer">
-                <div class="col-md-4 col-sm-6 col-xs-12 b-footer">
+                <div class="col-md-4 col-6 col-xs-12 b-footer">
                     <div class="section" id="payment">
                         <div class="widget HTML" data-version="1" id="HTML12">
                             <div class="widget-content">
@@ -367,7 +348,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 b-footer">
+                <div class="col-md-4 col-6 col-xs-12 b-footer">
                     <div class="section" id="social">
                         <div class="widget HTML" data-version="1" id="HTML13">
                             <div class="widget-content">
@@ -514,7 +495,7 @@
                     <button type="button" class="btn btn-primary">Đăng kí</button>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -529,8 +510,83 @@
         crossorigin="anonymous"></script>
     <!-- link js -->
     <script src="../js/resize.js"></script>
+    <script src="../js/localStorage.js"></script>
     <!-- code jquery -->
     <script>
+        const listProduct = document.querySelector('.listProduct');
+        const btnRemoveCart = document.querySelector('.btn-remove-cart')
+        const products = document.querySelectorAll('.listProduct')
+
+        const handleSetProductAddCart = () => {
+            const products = productAddCart.get('infoProduct')            
+            const html = products.map((product) => {                
+                return `
+                    <div class="row product">
+                        <div class="col-lg-3 col-6">
+                            <div>Ảnh</div>
+                            <div class="img">
+                                <img src="../${product.img}" alt="${product.name}">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-6">
+                            <div>Tên Sản Phẩm</div>
+                            <div class="name">
+                                <p>${product.name}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-6">
+                            <div>Đơn giá</div>
+                            <div class="price">
+                                ${product.priceNew}
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-6">
+                            <div>Số lượng</div>
+                            <div class="amount">
+                                ${product.numberBuy}
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-6">
+                            <div>Thành tiền</div>
+                            <div class="total">
+                                ${
+                                    formatNumber(product.priceNew
+                                    .replace(/\,/g, '')
+                                    .replace(/\đ/g, '')*Number(product.numberBuy), 0, ".", ",")+'đ'
+                                }
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-6">
+                            <div>Xóa</div>
+                            <div class="delete">
+                                x
+                            </div>
+                        </div>    
+                    </div>
+                `
+            }).join("")
+            listProduct.innerHTML = html
+        }        
+        handleSetProductAddCart();
+
+        const handleRemoveProduct = (e) => {            
+            if (e.target.className === 'delete') {
+                const product = e.target.parentElement.parentElement
+                product.remove();
+                
+                
+                
+            }
+        }
+        products.forEach((product) => {
+            product.addEventListener('click',handleRemoveProduct)
+        })
+
+        btnRemoveCart.addEventListener('click',function () {            
+            localStorage.clear()
+            location.reload();
+        })
+
         $(function () {
             $('.NguoiKhac .NguoiKhac_slidedown').click(function () {
                 $(this).next().slideToggle();
@@ -538,10 +594,10 @@
             })
             $('.maGiamGia button').click(function () {
                 $(this).next().slideToggle();
-            })  
-            $('.btn-buy').click(function() {
+            })
+            $('.btn-buy').click(function () {
                 alert('Xin lỗi bạn . Web chưa hỗ trợ thanh toán trực tuyến')
-            })                     
+            })
         })
     </script>
 </body>

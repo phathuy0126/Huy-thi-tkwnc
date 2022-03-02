@@ -1,208 +1,254 @@
 body {
-    background-color: #fff !important;
+  background-color: #fff !important;
 }
+/* css slick */
+.banner-container {
+  width: 100%;
+  /* height: 415px; */
+}
+.draggable {
+  cursor: pointer;
+}
+.bannerProduct div {
+  background: #fff;
+  width: 100%;
+}
+.bannerProduct div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bannerProduct .slick-arrow {
+  z-index: 1;
+  width: auto;
+}
+
+.bannerProduct .slick-arrow::before {
+  font-size: 2rem;
+}
+
+.bannerProduct .slick-next {
+  right: 10px;
+}
+
+.bannerProduct .slick-prev {
+  left: 10px;
+}
+
+/* ------- */
 .section-details-sp {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 .section-details-sp .row-1 {
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 0.8rem;    
-    text-transform: uppercase;
-    letter-spacing: 0px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0px;
 }
 .section-details-sp .row-1 a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 .section-details-sp .row-1 a:hover {
-    color: var(--mycolor);    
+  color: var(--mycolor);
 }
 .row-2 .title-sp p {
-    float: left;
-    font-size: 0.6rem;
-    color: var(--color_star);
-    line-height: 0px;
-    padding: 0px 1px;    
+  float: left;
+  font-size: 0.6rem;
+  color: var(--color_star);
+  line-height: 0px;
+  padding: 0px 1px;
 }
 .row-2 .title-sp p:first-child {
-    font-size: 1.5rem;
-    color: red;
-    font-weight: bold;
-    margin-right: 20px;
+  font-size: 1.5rem;
+  color: red;
+  font-weight: bold;
+  margin-right: 20px;
 }
 .row-2 .title-sp p:last-child {
-    font-size: 0.8rem;
-    color: var(--primary);
-    line-height: 8px;
-    margin-left: 10px;
-    cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--primary);
+  line-height: 8px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 /* carousel-sp */
 .carousel_sp .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .show_carousel_large {
-    cursor: pointer;    
+  cursor: pointer;
 }
 .show_carousel_large:hover {
-    color: var(--mycolor);
+  color: var(--mycolor);
 }
 .img_large img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .row-3 .thongtin div {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .row-3 .thongtin div:first-child p {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--mycolor);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--mycolor);
 }
 .row-3 .thongtin div:nth-child(2) p {
-    display: inline;
-    padding: 2px;
+  display: inline;
+  padding: 2px;
 }
 .row-3 .thongtin div:nth-child(2) p:nth-child(2) {
-    text-decoration: line-through;
-    font-weight: bold;    
-    color: var(--giacu);
-    margin-right: 20px;
+  text-decoration: line-through;
+  font-weight: bold;
+  color: var(--giacu);
+  margin-right: 20px;
 }
 .row-3 .thongtin div:nth-child(2) p:nth-child(3),
 .row-3 .thongtin div:nth-child(2) p:nth-child(4) {
-    color: var(--mygreen);
+  color: var(--mygreen);
 }
-.row-3 .thongtin div:nth-child(3) p{
-    display: inline;
-    padding: 2px;
+.row-3 .thongtin div:nth-child(3) p {
+  display: inline;
+  padding: 2px;
 }
 .row-3 .thongtin div:nth-child(3) p:nth-child(2) {
-    color: var(--mygreen);
+  color: var(--mygreen);
 }
 .row-3 .thongtin div:nth-child(4) {
-    border: 1px #ccc solid;
+  border: 1px #ccc solid;
 }
 .row-3 .thongtin div:nth-child(4) p:first-child {
-    background-color: var(--mygreen);
-    color: #fff;
-    font-weight: bold;
-    padding: 5px 10px; 
+  background-color: var(--mygreen);
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
 }
 .row-3 .thongtin div:nth-child(4) p:nth-child(2) {
-    padding: 20px 20px 10px 20px;
+  padding: 20px 20px 10px 20px;
 }
 .row-3 .thongtin div:nth-child(5) {
-    text-align: center;
+  text-align: center;
 }
 .row-3 .thongtin div:nth-child(5) button {
-    background-color: var(--mycolor);
-    width: 40%;
-    padding: 5px 0px;
-    border-radius: 5px;
-    outline: none;    
-    color: #fff;
+  background-color: var(--mycolor);
+  width: 40%;
+  padding: 5px 0px;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
 }
-.row-3 .thongtin div:nth-child(5) button i{
-    margin-right: 10px;
+.row-3 .thongtin div:nth-child(5) button i {
+  margin-right: 10px;
 }
-.row-3 .thongtin table{
-    margin-top: 50px;
-    width: fit-content;   
-    margin-left: 30px; 
+.row-3 .thongtin table {
+  margin-top: 50px;
+  width: fit-content;
+  margin-left: 30px;
 }
-.row-3 .thongtin table tr:first-child{
-    text-align: center;
+.row-3 .thongtin table tr:first-child {
+  text-align: center;
 }
-.row-3 .thongtin table tr:last-child{
-    text-align: center;    
-}
-.row-3 .thongtin table tr:last-child button {
-    
+.row-3 .thongtin table tr:last-child {
+  text-align: center;
 }
 .row-3 .thongtin table tr td:first-child {
-    min-width: 200px;
-    padding: 5px 0px;
+  min-width: 200px;
+  padding: 5px 0px;
 }
 /* btn buy  */
 .modal_buynow {
-    font-size: 0.9rem !important;
+  font-size: 0.9rem !important;
 }
 .modal_buynow .modal-header {
-    flex-direction: column;
-    padding-bottom: 0px !important;
+  flex-direction: column;
+  padding-bottom: 0px !important;
+}
+.modal_buynow .modal-header .modalContainer {
+  display: flex;  
+}
+.modal_buynow .modal-header .modalContainer > div {
+  margin-right: 10px;
+}
+.modal_buynow .modal-header .img {
+  width: 40px;
+  height: 40px;    
+}
+.modal_buynow .modal-header .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .modal_buynow .modal-body .items {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 .modal_buynow .modal-body .items .item_radio {
-    display: flex;
-    flex-direction: column;    
-    align-items: center;    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.modal_buynow .modal-body .items p {    
-    width: min-content;
+.modal_buynow .modal-body .items p {
+  width: min-content;
 }
 .modal_buynow .items .item_radio input {
-    width: 14px;
-    height: 14px;    
+  width: 14px;
+  height: 14px;
 }
 .modal_buynow .items .item_radio input,
 .modal_buynow .items .item_radio label {
-    cursor: pointer;
+  cursor: pointer;
 }
 .modal_buynow .soluong {
-    display: flex;    
+  display: flex;
 }
 .modal_buynow .soluong p {
-    font-weight: 500;
+  font-weight: 500;
 }
 .modal_buynow .soluong .number {
-    display: flex;
+  display: flex;
 }
 .modal_buynow .soluong .number div {
-    border: 1px solid rgb(207, 207, 207);
-    border-radius: 3px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .modal_buynow .modal-footer a {
-    width: 100%;
-    text-decoration: none;    
+  width: 100%;
+  text-decoration: none;
 }
 .modal_buynow .modal-footer button {
-    width: 100%;
-    background: var(--mycolor);
-    border-radius: 3px;
-    color: #fff !important;
-    outline: none;
+  width: 100%;
+  background: var(--mycolor);
+  border-radius: 3px;
+  color: #fff !important;
+  outline: none;
 }
 /* modal sản phẩm carousel */
 .modal_sp_overlay {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 9999;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .modal_sp img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
-
