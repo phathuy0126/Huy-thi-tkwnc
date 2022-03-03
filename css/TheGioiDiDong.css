@@ -356,7 +356,7 @@ div.fixed-bar div a i {
   visibility: visible;
 }
 /* ------------------cart */
-div.cart {
+/* div.cart {
   position: relative;
   width: 60px;
   height: 60px;
@@ -392,10 +392,10 @@ div.cart a:hover {
     height: 50px;
     opacity: 1;
   }
-}
+} */
 div.cart .i_cart i {
-  font-size: 20px !important;
-  position: absolute;
+  font-size: 30px !important;
+  color: var(--mycolor);
 }
 /* item_sản phẩm */
 .item-sp div:nth-child(2) p {

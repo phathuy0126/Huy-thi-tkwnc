@@ -1249,7 +1249,7 @@
                 </div>
             </div>
             <div class="row cart">
-                <div class="nav-bar-cart">
+                <!-- <div class="nav-bar-cart">                    
                     <div class="row mx-2 mt-3">
                         <div class="sum-item col-6">
                             <p>Tổng cộng:</p>
@@ -1270,7 +1270,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <a href="webpages/cart.html" class="i_cart"><i class="fas fa-shopping-cart"></i></a>
             </div>
             <div class="row">
@@ -1338,6 +1338,12 @@
             </div>
         </div>
     </div>
+    <!-- load -->
+    <div class="windowLoad" style="background-color: #ccc;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 9999;display: flex;justify-content: center;align-items: center;">
+        <div class="spinner-border" role="status" style="width: 4rem;height: 4rem;">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -1357,7 +1363,7 @@
     <script src="js/section_6.js"></script>
     <script src="js/resize.js"></script>
     <script src="./js/localStorage.js"></script>
-    <script>
+    <script>                
         const itemProducts = document.querySelectorAll('.item-product');
         const handleGetProduct = (e) => {
             const parentEle = e.target.parentElement.parentElement
@@ -1420,14 +1426,16 @@
                         breakpoint: 600,
                         settings: {
                             slidesToShow: 3,
-                            slidesToScroll: 3
+                            slidesToScroll: 3,
+                            arrows: false
                         }
                     },
                     {
                         breakpoint: 480,
                         settings: {
                             slidesToShow: 2,
-                            slidesToScroll: 2
+                            slidesToScroll: 2,
+                            arrows: false
                         }
                     }
                 ]

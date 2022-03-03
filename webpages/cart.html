@@ -497,6 +497,12 @@
             </div>
         </div>
     </div>
+    <!-- load -->
+    <div class="windowLoad" style="background-color: #ccc;position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 9999;display: flex;justify-content: center;align-items: center;">
+        <div class="spinner-border" role="status" style="width: 4rem;height: 4rem;">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -515,11 +521,11 @@
     <script>
         const listProduct = document.querySelector('.listProduct');
         const btnRemoveCart = document.querySelector('.btn-remove-cart')
-        const products = document.querySelectorAll('.listProduct')
+        const products = document.querySelector('.listProduct')        
 
         const handleSetProductAddCart = () => {
-            const products = productAddCart.get('infoProduct')            
-            const html = products.map((product) => {                
+            const infoProducts = productAddCart.get('infoProduct')
+            const html = infoProducts.map((product) => {
                 return `
                     <div class="row product">
                         <div class="col-lg-3 col-6">
@@ -549,11 +555,10 @@
                         <div class="col-lg-2 col-6">
                             <div>Thành tiền</div>
                             <div class="total">
-                                ${
-                                    formatNumber(product.priceNew
-                                    .replace(/\,/g, '')
-                                    .replace(/\đ/g, '')*Number(product.numberBuy), 0, ".", ",")+'đ'
-                                }
+                                ${formatNumber(product.priceNew
+                    .replace(/\,/g, '')
+                    .replace(/\đ/g, '') * Number(product.numberBuy), 0, ".", ",") + 'đ'
+                    }
                             </div>
                         </div>
                         <div class="col-lg-1 col-6">
@@ -564,25 +569,24 @@
                         </div>    
                     </div>
                 `
-            }).join("")
+            }).join("");
             listProduct.innerHTML = html
-        }        
-        handleSetProductAddCart();
-
-        const handleRemoveProduct = (e) => {            
-            if (e.target.className === 'delete') {
-                const product = e.target.parentElement.parentElement
-                product.remove();
-                
-                
-                
-            }
         }
-        products.forEach((product) => {
-            product.addEventListener('click',handleRemoveProduct)
+        handleSetProductAddCart(); 
+        products.querySelectorAll('.product').forEach((product, index) => {
+            product.addEventListener('click', (e) => {
+                if (e.target.className === 'delete') {
+                    const product = e.target.parentElement.parentElement
+                    product.remove();                    
+                    const infoProduct = productAddCart.get('infoProduct');
+                    const infoProductNew = infoProduct.splice(index,1)                    
+                    console.log(infoProduct);
+                    productAddCart.set(infoProduct);
+                }
+            })
         })
 
-        btnRemoveCart.addEventListener('click',function () {            
+        btnRemoveCart.addEventListener('click', function () {
             localStorage.clear()
             location.reload();
         })

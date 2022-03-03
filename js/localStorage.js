@@ -33,3 +33,9 @@ function formatNumber(a, b, c, d) {
 
 const product = createStorage('product');
 const productAddCart = createStorage('productAddCart');
+
+window.addEventListener('load',function () {
+    setTimeout(() => {
+        $('.windowLoad').remove();    
+    }, 100);
+})
