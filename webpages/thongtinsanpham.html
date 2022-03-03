@@ -840,7 +840,16 @@
             var formatPriceSave = formatNumber(save, 0, ".", ",");
             saveMoney.textContent = formatPriceSave + 'đ';
 
-            document.querySelector('.img_large>div>img').src = '../' + product.get('infoProduct').img;                
+            const ha = product.get('infoProduct').img;
+            if (ha.slice(0,3) === '../') {
+                document.querySelector('.img_large>div>img').setAttribute('src', `${product.get('infoProduct').img}`);                
+                console.log('slice');
+            } else {
+                document.querySelector('.img_large>div>img').setAttribute('src', `../${product.get('infoProduct').img}`);                
+                console.log('no');
+            }
+            console.log(ha.slice(0,6));
+            console.log(document.querySelector('.img_large>div>img'));
         }
         
         handleSetProduct();
