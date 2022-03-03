@@ -838,10 +838,12 @@
             var formatPriceSave = formatNumber(save, 0, ".", ",");
             saveMoney.textContent = formatPriceSave + 'đ';
 
-            document.querySelector('.img_large>div>img').setAttribute('src', '../' + product.get('infoProduct').img);                
+            document.querySelector('.img_large>div>img').src = '../' + product.get('infoProduct').img;                
         }
+        
         handleSetProduct();
         // -----------------------
+
         const handleGetProductAddCart = () => {
             const infoProduct = productAddCart.get('infoProduct') || [];
             const prev = {

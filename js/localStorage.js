@@ -36,13 +36,12 @@ const productAddCart = createStorage('productAddCart');
 
 
 const itemProducts = document.querySelectorAll('.item-product');
-const handleGetProduct = (e) => {
+const handleGetProduct = (e) => {  
     const parentEle = e.target.parentElement.parentElement
-    const img = parentEle.querySelector('img').getAttribute('src');
-    const name = parentEle.querySelector('.item-product p:first-child').textContent;
-    const priceNew = parentEle.querySelector('.item-product .priceNew').textContent;
-    const priceOld = parentEle.querySelector('.item-product .priceOld').textContent;
-
+    const img = parentEle.querySelector('a img').getAttribute('src');
+    const name = parentEle.querySelector('.item-product-if p:first-child').textContent;
+    const priceNew = parentEle.querySelector('.item-product-if .priceNew').textContent;
+    const priceOld = parentEle.querySelector('.item-product-if .priceOld').textContent;    
     const infoProduct = {
         img: img,
         name: name,
@@ -52,8 +51,6 @@ const handleGetProduct = (e) => {
     product.set('infoProduct', infoProduct);
     console.log(product.get('infoProduct'));
 }
-
-
 itemProducts.forEach(itemProduct => {
     itemProduct.addEventListener('click', handleGetProduct)
 })
