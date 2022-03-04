@@ -579,7 +579,7 @@
                 `
             }).join("");
             listProduct.innerHTML = html      
-            document.querySelector('.totalPrice').textContent = formatNumber(totalPrice, 0, ".", ",") + 'đ';
+            document.querySelector('.totalPrice').textContent = formatNumber(totalPrice+40000, 0, ".", ",") + 'đ';
             document.querySelector('.totalProduct').textContent = totalProduct;
         }
         handleSetProductAddCart(); 

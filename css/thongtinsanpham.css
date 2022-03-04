@@ -86,8 +86,7 @@ body {
   color: var(--mycolor);
 }
 .img_large {  
-  width: 400px;
-  height: 400px;
+  width: 320px;
   margin: auto;
 }
 .img_large img {
