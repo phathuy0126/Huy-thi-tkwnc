@@ -143,8 +143,8 @@
                 <div class="col-lg-6 col-12 mt-4">
                     <table>
                         <tr>
-                            <td>Giá</td>
-                            <td>0 đ</td>
+                            <td>Số lượng đơn hàng</td>
+                            <td class="totalProduct">0 đ</td>
                         </tr>
                         <tr>
                             <td>Phí giao hàng quốc tế</td>
@@ -152,7 +152,7 @@
                         </tr>
                         <tr>
                             <td>Tổng đơn hàng</td>
-                            <td>40.000 đ</td>
+                            <td class="totalPrice">40.000 đ</td>
                         </tr>
                     </table>
                 </div>
@@ -527,7 +527,13 @@
 
         const handleSetProductAddCart = () => {
             const infoProducts = productAddCart.get('infoProduct')
-            const html = infoProducts.map((product) => {
+            let totalPrice = 0;
+            let totalProduct = 0;
+            const html = infoProducts.map((product,index) => {                                      
+                totalProduct = index + 1;
+                totalPrice += Number(product.priceNew                
+                    .replace(/\,/g, '')
+                    .replace(/\đ/g, ''))
                 return `
                     <div class="row product">
                         <div class="col-lg-3 col-6">
@@ -572,7 +578,9 @@
                     </div>
                 `
             }).join("");
-            listProduct.innerHTML = html
+            listProduct.innerHTML = html      
+            document.querySelector('.totalPrice').textContent = formatNumber(totalPrice, 0, ".", ",") + 'đ';
+            document.querySelector('.totalProduct').textContent = totalProduct;
         }
         handleSetProductAddCart(); 
         products.querySelectorAll('.product').forEach((product, index) => {

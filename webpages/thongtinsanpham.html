@@ -802,12 +802,17 @@
         const nameModal = document.querySelector('.modalContainer .modal-title');
         const price = document.querySelector('.modalContainer .price');
         const numberBuy = document.querySelector('.modal-body .number_buy');
+        
+        const imglocalstorage = product.get('infoProduct').img;
+        const namelocalstorage = product.get('infoProduct').name;
+        const priceNewlocalstorage = product.get('infoProduct').priceNew;
+        const priceOldlocalstorage = product.get('infoProduct').priceOld;
 
         const handleSetModalBuy = () => {
             // set vào modal buy
-            imgModal.setAttribute('src', `../${product.get('infoProduct').img}`);
-            nameModal.textContent = product.get('infoProduct').name;
-            const numberprice = product.get('infoProduct').priceNew.replace(/\,/g, '').replace(/\đ/g, '');
+            imgModal.setAttribute('src', `../${imglocalstorage}`);                
+            nameModal.textContent = namelocalstorage;
+            const numberprice = priceNewlocalstorage.replace(/\,/g, '').replace(/\đ/g, '');
             price.textContent = formatNumber(numberprice, 0, ".", ",") + ' đ';
         }
         document.querySelector('.btn_buy').addEventListener('click', handleSetModalBuy)
@@ -831,24 +836,17 @@
         // handleGetColor();
 
         const handleSetProduct = () => {
-            nameProduct.textContent = product.get('infoProduct').name;
-            priceNew.textContent = product.get('infoProduct').priceNew;
-            priceOld.textContent = product.get('infoProduct').priceOld;
+            nameProduct.textContent = namelocalstorage;
+            priceNew.textContent = priceNewlocalstorage;
+            priceOld.textContent = priceOldlocalstorage;
             const numberpriceNew = priceNew.textContent.replace(/\,/g, '').replace(/\đ/g, '');
             const numberpriceOld = priceOld.textContent.replace(/\,/g, '').replace(/\đ/g, '');
             const save = numberpriceOld - numberpriceNew;
             var formatPriceSave = formatNumber(save, 0, ".", ",");
             saveMoney.textContent = formatPriceSave + 'đ';
 
-            const ha = product.get('infoProduct').img;
-            if (ha.slice(0,3) === '../') {
-                document.querySelector('.img_large>div>img').setAttribute('src', `${product.get('infoProduct').img}`);                
-                console.log('slice');
-            } else {
-                document.querySelector('.img_large>div>img').setAttribute('src', `../${product.get('infoProduct').img}`);                
-                console.log('no');
-            }
-            console.log(ha.slice(0,6));
+            
+            document.querySelector('.img_large>div>img').setAttribute('src', `../${imglocalstorage}`);                
             console.log(document.querySelector('.img_large>div>img'));
         }
         
@@ -858,9 +856,9 @@
         const handleGetProductAddCart = () => {
             const infoProduct = productAddCart.get('infoProduct') || [];
             const prev = {
-                img: product.get('infoProduct').img,
-                name: product.get('infoProduct').name,
-                priceNew: product.get('infoProduct').priceNew,
+                img: imglocalstorage,
+                name: namelocalstorage,
+                priceNew: priceNewlocalstorage,
                 numberBuy: numberBuy.textContent,
             }
             infoProduct.push(prev)

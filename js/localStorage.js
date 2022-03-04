@@ -34,8 +34,9 @@ const handleGetProduct = (e) => {
     const name = parentEle.querySelector('.item-product-if p:first-child').textContent;
     const priceNew = parentEle.querySelector('.item-product-if .priceNew').textContent;
     const priceOld = parentEle.querySelector('.item-product-if .priceOld').textContent;    
+    
     const infoProduct = {
-        img: img,
+        img: img.slice(0,3) === '../' ? img.slice(3) : img,
         name: name,
         priceNew: priceNew,
         priceOld: priceOld
