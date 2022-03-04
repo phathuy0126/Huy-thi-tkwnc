@@ -381,7 +381,7 @@
                                         nhiều hơn nữa.</p>
                                     <form
                                         action="https://docs.google.com/forms/d/e/1FAIpQLSeRbEA0DYZAwjNzBXa350VYQ0Vke6eSGcjuNsUgVfbjShHT0Q/formResponse?embedded=true"
-                                        id="mc-embedded-subscribe-form" method="post" onsubmit="return hienthongbao()"
+                                        id="mc-embedded-subscribe-form" method="post" onsubmit="hienthongbao()"
                                         style="display: block;" target="hidden_iframe">
                                         <div class="input-group">
                                             <input class="form-control" id="mail" name="EMAIL"
@@ -533,7 +533,7 @@
                 totalProduct = index + 1;
                 totalPrice += Number(product.priceNew                
                     .replace(/\,/g, '')
-                    .replace(/\đ/g, ''))
+                    .replace(/\đ/g, '')) * Number(product.numberBuy);
                 return `
                     <div class="row product">
                         <div class="col-lg-3 col-6">
