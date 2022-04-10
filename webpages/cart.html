@@ -592,16 +592,13 @@
                     const infoProductNew = infoProduct.splice(index,1)                    
                     console.log(infoProduct);
                     productAddCart.set(infoProduct);
+                    location.reload();
                 }
             })
         })
 
         btnRemoveCart.addEventListener('click', function () {
             localStorage.clear()
-            location.reload();
-        })
-
-        document.querySelector('.product .delete').addEventListener('click', function () {
             location.reload();
         })
 
